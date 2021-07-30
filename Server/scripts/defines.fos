@@ -1619,7 +1619,7 @@
 # define GLOBAL_PROCESS_NPC_IDLE                  ( 6 )    // Called every __CritterIdleTick
 # define GLOBAL_PROCESS_KICK                      ( 7 )
 # define GLOBAL_MAP_BASE_SPEED                    ( 1.0f ) // Base speed, 1 pixels per second
-# define GLOBAL_MAP_SKILL_SPEED_MODULE            ( 0.1f ) // Модуль скорость по навыку
+# define GLOBAL_MAP_SKILL_SPEED_MODULE            ( 0.005f ) // Модуль скорость по навыку
 # define GLOBAL_MAP_SKILL_START_EFFECT            ( 100 )  // Значение навыка с которого начинается эффект прибавления скорости
 														  // Если скиталец - GLOBAL_MAP_SKILL_START_EFFECT > 0 то GLOBAL_MAP_BASE_SPEED + ( скиталец - GLOBAL_MAP_SKILL_START_EFFECT ) * GLOBAL_MAP_SKILL_SPEED_MODULE иначе GLOBAL_MAP_BASE_SPEED
 
