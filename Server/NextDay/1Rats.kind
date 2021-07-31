@@ -23,11 +23,11 @@
 #Ќазвани€ дружественных семейств, через пробел.
 #---------------------------------------------------------------------------
 
-Count = 4-8
+Count = 8-10
 Pids = 1000:1-2 1001:1-2 1002:1-2 1003:1-2 1004:1-2
 CountGroups = 1
 Queens = 1004
-Bioms = Forest Mountain Rail Road Ruins
+Bioms = Forest Rail Road Ruins
 TimeMinute = 120-260
 SpawnRadius = 15-25
 AiScript = Default

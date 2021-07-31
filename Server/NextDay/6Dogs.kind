@@ -21,11 +21,11 @@
 #Ќазвани€ дружественных семейств, через пробел.
 #---------------------------------------------------------------------------
 
-Count = 5-8
+Count = 8-10
 Pids = 1150:1-2 1151:1-2 1152:1-2 1153:1-2
 CountGroups = 1
 Queens = 1153
-Bioms = Forest Mountain Lake Rail River Road Ruins 
+Bioms = Forest Lake Rail River Road Ruins 
 TimeMinute = 120-260
 SpawnRadius = 15-25
 AiScript = Aggressor

@@ -21,11 +21,11 @@
 #Ќазвани€ дружественных семейств, через пробел.
 #---------------------------------------------------------------------------
 
-Count = 1-3
+Count = 2-4
 Pids = 1120:1-2 1121:1-2 1122:1-2 1123:1-2
 CountGroups = 1
 Queens = 1123
-Bioms = Forest Lake Mountain Rail River Road Ruins Westland
+Bioms = Forest
 TimeMinute = 120-260
 SpawnRadius = 15-25
 AiScript = Default

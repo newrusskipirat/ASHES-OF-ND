@@ -18,11 +18,11 @@
 #Ќазвани€ дружественных семейств, через пробел.
 #---------------------------------------------------------------------------
 
-Count = 2-4
+Count = 3-4
 Pids = 1360:3-6
 CountGroups = 1
 Queens = 1360
-Bioms =  Forest Mountain Ruins Westland
+Bioms =  Mountain Ruins Westland
 TimeMinute = 120-260
 SpawnRadius = 15-25
 AiScript = Default

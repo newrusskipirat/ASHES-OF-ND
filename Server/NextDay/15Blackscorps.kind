@@ -19,11 +19,11 @@
 #Ќазвани€ дружественных семейств, через пробел.
 #---------------------------------------------------------------------------
 
-Count = 2-4
+Count = 3-4
 Pids = 1420:2-4 1421:1-1
 CountGroups = 1
 Queens = 1421
-Bioms =  Forest Mountain Lake River Ruins Westland
+Bioms =  Mountain Lake  Ruins Westland
 TimeMinute = 120-260
 SpawnRadius = 15-25
 AiScript = Aggressor
