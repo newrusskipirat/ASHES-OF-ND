@@ -292,16 +292,19 @@ bool IsBottle( uint16 pid )
 
 bool _UseEmptyGlassBottle( Item& bottle, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery )
 {
+	if( valid( onCritter ) || valid( onItem ) || valid( onScenery ) )
+		return false;
+	
     uint16 pid = bottle.GetProtoId();
     if( !IsBottle( pid ) )
-        return true;
+        return false;
 
     if( pid == PID_BOTTLE_GLASS || pid == PID_BOTTLE_EMPTY )
     {
-        drainGlass (cr);
+        return drainGlass (cr);
     }
 
-    return true;
+    return false;
 }
 
 void drainGlass( Critter& player, int var, int con, int param2 )
@@ -309,15 +312,15 @@ void drainGlass( Critter& player, int var, int con, int param2 )
     drainingGlass_checkTiles( player );
 }
 
-void drainGlass( Critter& player )
+bool drainGlass( Critter& player )
 {
-    drainingGlass_checkTiles( player );
+    return drainingGlass_checkTiles( player );
 }
 
-void drainingGlass_checkTiles( Critter& player )
+bool drainingGlass_checkTiles( Critter& player )
 {
     Map@ map = player.GetMap();
-    if( @map is null ) return;
+    if( @map is null ) return false;
 
 
     uint16   tx = H2T( player.HexX );
@@ -352,17 +355,19 @@ void drainingGlass_checkTiles( Critter& player )
                 player.SetDir( dir[ i ] );
                 break;
             }
-
-
+			
             femote( player, "Набирает воду в бутылку" );
-			player.DeleteItem(PID_BOTTLE_GLASS,1); player.AddItem ( PID_GLASS_BOTTLE_DIRTY_FULL , 1);
-           
+			player.DeleteItem( PID_BOTTLE_GLASS, 1 ); 
+			player.AddItem( PID_GLASS_BOTTLE_DIRTY_FULL, 1 );
+			return true;           
         }
         else
             player.Say( SAY_NETMSG, "Рядом нет воды." );
     }
     else
         player.Say( SAY_NETMSG, "Вы не на берегу." );
+	
+	return false;
 }
 ///////////////////////////////////////////
 void _InitBottle( Item& item, bool firstTime )
