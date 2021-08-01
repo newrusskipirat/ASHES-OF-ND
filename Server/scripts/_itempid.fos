@@ -5,6 +5,8 @@
 ***************       Armor                         ***************
 ******************************************************************/
 
+
+
 // Light
 #define PID_LEATHER_JACKET                    ( 74 )    // Кожаная куртка
 #define PID_LEATHER_ARMOR                     ( 1 )     // Кожаная броня
@@ -547,6 +549,19 @@
 #define PID_LOCKER_LOW                        ( 1317 )
 #define PID_LOCKER_MED                        ( 1318 )
 #define PID_LOCKER_HARD                       ( 1319 )
+
+
+//Doors
+#define PID_DOOR_BLOCKER                     		( 16804 )						// Блокиратор двери
+#define PID_CATHEDRAL_DOOR_EW	              		( 2346 )						// Ворота собора
+#define PID_GARAGE_GATE_SMALL_EW               		( 3417 )						// Ворота гаража короткие
+#define PID_GARAGE_GATE_SMALL_NS               		( 3418 )						// Ворота гаража короткие
+#define PID_VC_GATE_SMALL_EW            	   		( 3434 )						// Ворота ГУ короткие
+#define PID_FARM_GATE_EW                  			( 3818 )						// Ворота фермы длинные
+#define PID_FARM_GATE_NS                  			( 3902 )						// Ворота фермы длинные
+#define PID_GARAGE_GATE_EW                  		( 4768 )						// Ворота гаража длинные
+#define PID_GARAGE_GATE_NS	                		( 4769 )						// Ворота гаража длинные
+#define PID_FARM_GATE_SMALL_EW             			( 22867 )						// Ворота фермы короткие
 
 /******************************************************************
 ***************       Misc.                         ***************

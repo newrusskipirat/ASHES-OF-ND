@@ -4,6 +4,7 @@
 #include "popups.fos"
 
 import void critter_reload_weapon( Critter& cr, Item& weapon, Item@ ammo ) from "main";
+import void ToggleDoorBlocker( Map& map, Item& door, bool create ) from "main";
 import bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetItem, Scenery@ targetScen, uint param ) from "main";
 import void CombatAttack( Critter& cr, Critter@ target, ProtoItem& weapon, uint8 weaponMode, ProtoItem@ ammo, uint16 hexX, uint16 hexY ) from "combat";
 import bool AddAttackPlane( Critter& npc, uint priority, Critter& target, bool run ) from "npc_planes";
@@ -1467,6 +1468,12 @@ void unsafe_openCodeDoor( Critter& player, int itemId, int code, int param2, str
             {
                 item.LockerOpen();
                 player.RunClientScript( "client_screen_codedoor@HideScreen", 0, 0, 0, "", null );
+
+				if( item.GetType() == ITEM_TYPE_DOOR ) 
+				{
+					Map@ map = player.GetMap();
+					ToggleDoorBlocker( map, item, false );
+				}
             }
 
         }

@@ -4273,6 +4273,8 @@ Material=1
 LightColor=-16777216
 AnimWaitBase=1
 
+
+
 [Proto] # {Антиблокиратор}
 ProtoId=852
 Type=5
@@ -7816,3 +7818,11 @@ Flags=24
 DisableEgg=1
 SoundId=48
 Material=3
+
+[Proto] # PID_DOOR_BLOCKER {Невидимый блокиратор} 
+ProtoId=16804
+Type=5
+PicMap=art\items\blank.png
+PicInv=art\inven\reserved.frm
+Flags=4610
+DisableEgg=1

@@ -6,6 +6,7 @@
 import void Log_Lockpick( Critter& player, int lock, int force, int succes, string@ param3, int[] @ param4 )  from "gm"; // ErlKing
 import bool IsDoorAutomatic( Item& door, bool& isPower ) from "interactive_obj";
 import bool IsDoorAutomatic( uint pid ) from "interactive_obj";
+import void ToggleDoorBlocker( Map& map, Item& door, bool create ) from "main";
 
 bool UseItemOnLocker( Critter& cr, Item& locker, Item& item )                                                            // Export
 {
@@ -111,9 +112,27 @@ bool UseSkillOnLocker( Critter& cr, Item& locker, int skill ) // Export
 
             // Change state
             if( FLAG( locker.LockerCondition, LOCKER_ISOPEN ) )
-                locker.LockerClose();
+            {
+                Map@ map = GetMap( locker.MapId );
+                if( !valid( map ) )
+                    return true;
+                if( map.IsHexPassed( locker.HexX, locker.HexY) )
+                {
+                    locker.LockerClose();
+                    ToggleDoorBlocker( map, locker, true );
+                }
+                else
+                {
+                    cr.Say( SAY_NETMSG, "Что-то не даёт закрыть дверь." );
+                }
+                return true;
+            }
             else
+            {
+                ToggleDoorBlocker( map, locker, false );
                 locker.LockerOpen();
+                return true;
+            }
         }
         else if( locker.GetType() == ITEM_TYPE_CONTAINER )
         {

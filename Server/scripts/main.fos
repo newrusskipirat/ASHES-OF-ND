@@ -3857,5 +3857,146 @@ bool canPutItemInContainer( Item@ item, Item@ container )
 		return false;
 	return true;
 }
+
+void ToggleDoorBlocker( Map& map, Item& door, bool create ) 
+{
+    if( !valid( map ) ) { return; }
+
+    uint16 dir = 0;
+    uint16 blocker_count = 0;
+
+    uint16 tx = door.HexX;  
+    uint16 ty = door.HexY;
+
+    uint16 doorPid = door.GetProtoId();
+
+    switch( doorPid ) 
+    {
+        case( PID_FARM_GATE_EW ):
+        case( PID_GARAGE_GATE_EW ):
+            dir = 1;
+            blocker_count = 3;
+            break;
+        case( PID_FARM_GATE_NS ):
+        case( PID_GARAGE_GATE_NS ):
+            dir = 0;
+            blocker_count = 3;
+            break;
+        case( PID_CATHEDRAL_DOOR_EW ):
+        case( PID_VC_GATE_SMALL_EW ):
+        case( PID_GARAGE_GATE_SMALL_EW ):
+        case( PID_FARM_GATE_SMALL_EW ):
+            dir = 1;
+            blocker_count = 1;
+            break;
+        case( PID_GARAGE_GATE_SMALL_NS ):
+            dir = 0;
+            blocker_count = 1;
+            break;
+    }   
+
+    if ( create == false ) 
+    { // удаление
+        for ( uint16 i = 0; i < blocker_count; i++ ) 
+        { // петля №1
+            if( dir == 1 )  
+            {
+                if( ( i == 1 || i == 3 || i == 5 ) ) 
+                {
+                    map.MoveHexByDir( tx, ty, 0, 1 );
+                }
+                else 
+                {
+                    map.MoveHexByDir( tx, ty, 1, 1 );
+                }
+
+            } 
+            else 
+            {
+                map.MoveHexByDir( tx, ty, 5, 1 );
+            }
+            
+            Item@ blockItem = map.GetItem( tx, ty, PID_DOOR_BLOCKER );
+            if( valid( blockItem ) ) {
+                DeleteItem( blockItem ); 
+            }   
+        }
+
+        tx = door.HexX;
+        ty = door.HexY;
+
+        for ( uint16 i = 0; i < blocker_count; i++ ) { // петля №2
+            if( dir == 1 )  
+            {
+                if( ( i == 1 || i == 3 || i == 5 ) ) 
+                {
+                    map.MoveHexByDir( tx, ty, 4, 1 );
+                } 
+                else    
+                {
+                    map.MoveHexByDir( tx, ty, 3, 1 );
+                }
+            } 
+            else    
+            {
+                map.MoveHexByDir( tx, ty, 2, 1 );
+            }
+            
+            Item@ blockItem = map.GetItem( tx, ty, PID_DOOR_BLOCKER );
+            if( valid( blockItem ) ) 
+            {
+                DeleteItem( blockItem ); 
+            }   
+        }
+        return;
+    }
+
+    for ( uint16 i = 0; i < blocker_count; i++ ) 
+    { // петля №1
+        if( dir == 1 )  
+        {
+            if( ( i == 1 || i == 3 || i == 5 ) ) 
+            {
+                map.MoveHexByDir( tx, ty, 0, 1 );
+            } 
+            else 
+            {
+                map.MoveHexByDir( tx, ty, 1, 1 );
+            }
+        } 
+        else
+        {
+            map.MoveHexByDir( tx, ty, 5, 1 );
+        }
+        
+        map.AddItem( tx, ty, PID_DOOR_BLOCKER, 1 );
+    }
+
+    tx = door.HexX;
+    ty = door.HexY;
+
+    for ( uint16 i = 0; i < blocker_count; i++ ) 
+    { // петля №2
+        if( dir == 1 ) 
+        {
+            if( ( i == 1 || i == 3 || i == 5 ) ) 
+            {
+                map.MoveHexByDir( tx, ty, 4, 1 );
+            } 
+            else
+            {
+                map.MoveHexByDir( tx, ty, 3, 1 );
+            }
+        } 
+        else    
+        {
+            map.MoveHexByDir( tx, ty, 2, 1 );
+        }
+        map.AddItem( tx, ty, PID_DOOR_BLOCKER, 1 );
+    }
+}
+
+
+
 Project @CreateProject( string@ name, string@ path ){ return null; }
 Project @get_Project( string@ name ){ return null; }

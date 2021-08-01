@@ -5,6 +5,7 @@
 
 import void AffectPoison( Critter& cr, int value ) from "poison";
 import void AffectRadiation( Critter& cr, int value ) from "radiation";
+import void ToggleDoorBlocker( Map& map, Item& door, bool create ) from "main";
 
 // from new SDK
 
@@ -56,8 +57,10 @@ uint e_AutoCloseDoor( uint[] @ val )
         }
     }
 
-    if( door.LockerClose() )
+    if( door.LockerClose() ) { 
+        ToggleDoorBlocker( map, door, true );
         return 0;
+    }
 
     return REAL_MINUTE( 3 );
 }
