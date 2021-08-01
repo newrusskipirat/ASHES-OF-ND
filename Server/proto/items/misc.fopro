@@ -1763,8 +1763,6 @@ Material=7
 [Proto] # PID_DICE {Кости (игральные кости)}
 ProtoId=325
 Type=5
-ScriptModule=item
-ScriptFunc=_Dice
 PicMap=art\items\smalbox2.frm
 PicInv=art\inven\dice1.frm
 Flags=402653214
@@ -1779,8 +1777,6 @@ Material=2
 [Proto] # PID_LOADED_DICE {Шулерские кости}
 ProtoId=326
 Type=5
-ScriptModule=item
-ScriptFunc=_Dice
 PicMap=art\items\smalbox2.frm
 PicInv=art\inven\dice2.frm
 Flags=402653214
@@ -2321,11 +2317,9 @@ SoundId=48
 Cost=20
 Material=2
 
-[Proto] # {Колода карт}
+[Proto] # PID_DECK_OF_CARDS {Колода карт}
 ProtoId=436
 Type=5
-ScriptModule=item
-ScriptFunc=_Cards
 PicMap=art\items\smalbox2.frm
 PicInv=art\inven\cards2.frm
 Flags=134217758
@@ -2337,11 +2331,9 @@ SoundId=48
 Cost=2
 Material=7
 
-[Proto] # {Колода крапленных карт}
+[Proto] # PID_MARKED_DECK_OF_CARDS {Колода крапленных карт}
 ProtoId=437
 Type=5
-ScriptModule=item
-ScriptFunc=_Cards
 PicMap=art\items\smalbox2.frm
 PicInv=art\inven\cards3.frm
 Flags=134217758

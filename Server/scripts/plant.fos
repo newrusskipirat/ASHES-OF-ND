@@ -1001,7 +1001,7 @@ class ObjectsManager : iManagerModule, iManager_loop, iManager_time, iManager_wo
 		
 		
 		
-		_test_content_world();
+		//_test_content_world();
 		//_test_content();
 		// вызывается в порядке приоритетов
 		GardenInit();
@@ -1091,7 +1091,7 @@ ProtoPlant@ PlantCreate(Item& item, uint time)
 {
 	
     uint basePid = item.Proto.Plant_BasePid;
-	Log("proto base pid "+basePid);
+	//Log("proto base pid "+basePid);
     ProtoPlant @ plant = null;
 	
 	string[] names = {"corn"};
@@ -1101,7 +1101,7 @@ ProtoPlant@ PlantCreate(Item& item, uint time)
 	{
 		@plant = cast<ProtoPlant@>(objectManager.ProtoObject[ "ProtoPlant:"+names[i] ]);
         if(plant is null) continue;
-		Log("plant BP "+plant.BasePid);
+		//Log("plant BP "+plant.BasePid);
 		
 		
         if(plant.BasePid == basePid)
@@ -1109,11 +1109,6 @@ ProtoPlant@ PlantCreate(Item& item, uint time)
 			
 			string name = ""+plant.Name+"_"+item.Id;
 			ProtoPlant@ pp = cast<ProtoPlant@>(plant.get_Copy(name));
-			
-			
-			
-			
-			
 			
 			if(pp is null)
 			{

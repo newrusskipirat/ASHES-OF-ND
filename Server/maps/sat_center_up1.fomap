@@ -46255,8 +46255,6 @@ ProtoId              63
 MapX                 471
 MapY                 328
 Dir                  3
-ScriptName           poker
-FuncName             _PokeranInit
 Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
