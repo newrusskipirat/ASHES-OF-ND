@@ -50,7 +50,7 @@ $	94	Sot1liza_new
 $	100	lake_bar
 $	101	lake_fish
 $	102	lake_general
-
+$   103 lake_trader_andrewfish
 $	110	xmas_grand
 
 * Диапазон (150 - 200) зарезервирован под систему динамически переключающихся диалогов.
@@ -95,17 +95,17 @@ $	381	jun_mutant_leader
 $	382	jun_Mutdoc
 $	383	jun_raider2
 $	384	jun_Tein
+$   385 jun_trader_bud
 
-$	385	sat_doc
-$	386	sat_narcodiller
-$	387	sat_Reactorguy
-$	388	sat_weaponguy
+$	386	sat_doc
+$	387	sat_narcodiller
+$	388	sat_Reactorguy
+$	389	sat_weaponguy
 
-$	389	mod_trader_vendor
-$	390	mod_trader_baltas
-$	391	mod_sheriff
-$	392	vin_mal
-$	393	trader_andrew_fish
+$	390	mod_trader_vendor
+$	391	mod_trader_baltas
+$	392	mod_sheriff
+$	393	vin_mal
 
 $   400   mod_gov_treasurer
 $	401	  black_junk
