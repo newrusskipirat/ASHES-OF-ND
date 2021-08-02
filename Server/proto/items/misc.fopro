@@ -7337,7 +7337,7 @@ Volume=1
 SoundId=48
 Cost=375
 
-[Proto] # {’окен химической лаборатории}
+[Proto] # {Токен химической лаборатории}
 ProtoId=4065
 Type=5
 ScriptModule=item
@@ -7348,6 +7348,20 @@ Flags=1572894
 DisableEgg=1
 Stackable=1
 SoundId=48
+
+[Proto] # PID_CHEM_BUFFOUT_BLACK {Таблетки для обеззараживания воды}
+ProtoId=4066
+Type=5
+PicMap=art\items\buffout.fofrm
+PicInv=art\inven\Chem_buffout_black.png
+Flags=134217758
+DisableEgg=1
+Stackable=1
+Weight=92
+Volume=1
+SoundId=48
+Cost=250
+Material=1
 
 [Proto]
 ProtoId=7900
