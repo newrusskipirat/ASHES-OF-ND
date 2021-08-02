@@ -904,6 +904,25 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
     if( isPlayer && IsStill( targetItem ) && UseStill( cr, targetItem, -1, item ) )
         return true;
 
+    // обеззараживание воды
+    Item@ chemItem = cr.GetItem( 0, 1 );
+    if( ( pid == PID_GLASS_BOTTLE_DIRTY_FULL || pid == PID_BOTTLE_DIRTY_FULL ) && useOnSelf && valid(chemItem) && chemItem.GetProtoId() == PID_CHEM_BUFFOUT_BLACK )
+    {
+        uint16 bottlePID = (pid == PID_GLASS_BOTTLE_DIRTY_FULL) ? PID_GLASS_BOTTLE_FULL : PID_BOTTLE_FULL;
+
+        chemItem.Val0++;   
+        _SubItem ( item, 1 );
+        cr.AddItem( bottlePID, 1 );
+
+        if (chemItem.Val0 > 4)
+        { 
+            _SubItem ( chemItem, 1 );
+            cr.Say( SAY_NETMSG, "Ваша таблетка иссякла.");
+        }
+
+        return true;
+    }
+
 	int ItemType = item.GetType();
 	if( ItemType == ITEM_TYPE_DRUG || ItemType == ITEM_TYPE_FOOD )
 	{
