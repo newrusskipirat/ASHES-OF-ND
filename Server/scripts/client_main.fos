@@ -183,7 +183,7 @@ bool start()
     __global = CONF_GLOB_GRID | CONF_GLOB_WILD;
 
     if( !__FullScr )
-        __MouseScroll = false;
+        __MouseScroll = true;
 
     // 3d models preloading
     #ifdef PLAYERS_3D
