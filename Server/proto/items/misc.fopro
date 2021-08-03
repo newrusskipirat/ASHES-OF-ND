@@ -3216,7 +3216,7 @@ DisableEgg=1
 Stackable=0
 Weight=100
 SoundId=48
-Cost=3
+Cost=20
 Material=3
 
 [Proto] # {Бутылка}
@@ -7349,15 +7349,29 @@ DisableEgg=1
 Stackable=1
 SoundId=48
 
-[Proto] # PID_CHEM_BUFFOUT_BLACK {Таблетки для обеззараживания воды}
+[Proto] # PID_CHEM_BUFFOUT_BLACK {Таблетка для обеззараживания воды}
 ProtoId=4066
 Type=5
 PicMap=art\items\buffout.fofrm
 PicInv=art\inven\Chem_buffout_black.png
-Flags=134217758
+Flags=402653214
 DisableEgg=1
 Stackable=1
-Weight=92
+Weight=20
+Volume=0
+SoundId=48
+Cost=50
+Material=1
+
+[Proto] # PID_BLACK_BUFFOUT_PACKAGING {Пачка с таблетками для обеззараживания воды}
+ProtoId=4067
+Type=5
+PicMap=art\items\buffout.fofrm
+PicInv=art\inven\condombl.frm
+Flags=402653214
+DisableEgg=1
+Stackable=0
+Weight=115
 Volume=1
 SoundId=48
 Cost=250
@@ -7715,7 +7729,7 @@ Stackable=1
 Weight=7
 Volume=0
 SoundId=48
-Cost=3
+Cost=1
 Material=1
 
 
