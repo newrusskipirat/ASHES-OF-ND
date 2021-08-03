@@ -1073,6 +1073,17 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
 		else  cr.Say( SAY_NETMSG, "Вам нужна зажигалка");
 		return true;
     }
+	// Достаем таблетки из пачки
+	if (pid == PID_BLACK_BUFFOUT_PACKAGING )
+	{	
+		cr.Say( SAY_NETMSG , "Вы достали одну таблетку из пачки");
+		item.Val0++;
+		cr.AddItem ( PID_CHEM_BUFFOUT_BLACK , 1);
+		if (item.Val0 >4)
+		{ _SubItem (item, 1);
+		cr.Say( SAY_NETMSG, "Это была последняя");}
+		return true;
+	}
 
     // Mutate
     if( pid == PID_MUTAGENIC_SYRUM )
