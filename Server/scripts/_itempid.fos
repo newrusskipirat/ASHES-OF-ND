@@ -150,10 +150,8 @@
 #define PID_PLANT_SPIKE                       ( 365 ) // Grouped
 #define PID_THROWING_KNIFE                    ( 45 )  // Grouped
 #define PID_ROCK                              ( 19 )  // Grouped
-#define PID_GOLD_NUGGET                       ( 423 ) // Grouped
-#define PID_URANIUM_ORE                       ( 426 ) // Grouped
-#define PID_REFINED_ORE                       ( 486 ) // Grouped
 #define PID_BALL                              ( 650 ) // Grouped
+
 
 // Melee -  Cutting
 #define PID_KNIFE                             ( 4 )
@@ -211,6 +209,7 @@
 #define PID_FIREBREATH                        ( 596 )
 #define PID_SCISSORS                          ( 597 )
 #define PID_CUTTHROAT                         ( 598 )
+
 
 
 /******************************************************************
@@ -590,8 +589,6 @@
 #define PID_BOTTLE_EMPTY                      ( 532 ) // Пустая бутылка
 #define PID_PART_OF_ROPE                      ( 534 ) // Кусок веревки
 #define PID_GUNPOWDER                         ( 535 ) // Коробка пороха
-#define PID_METAL_ORE                         ( 536 ) // Железная руда
-#define PID_MINERAL                           ( 537 ) // Минерал
 #define PID_TUBE                              ( 538 ) // Металлическая труба
 #define PID_BRAHMIN_SKIN                      ( 449 ) // Шкура брамина
 #define PID_MEAT                              ( 539 ) // Мясо
@@ -1033,7 +1030,6 @@
 #define PID_SIGN                              ( 1458 )
 #define PID_INFOPAD                           ( 1460 )
 #define PID_IRON_PLATE                        ( 1473 )
-#define PID_IRON_BAR                          ( 1474 )
 #define PID_IRON_DETALS                       ( 1475 )
 #define PID_PB_PLATE                          ( 1477 )
 #define PID_PB_FOR_AMMO                       ( 1478 )
@@ -1167,9 +1163,35 @@
 #define PID_ORE_1							  		( 8004 ) 						// Руда №2
 #define PID_ROCKFALL						  		( 7909 ) 						// Обвал/завал
 #define PID_BOULDER							  		( 7910 ) 						// Валун (пустая порода)
+
 #define PID_COAL_1									( 16798 )							// Уголь-1
 #define PID_COAL_2									( 16799 )							// Уголь-2
-#define PID_COAL                              		( 15083 )   					// Каменный уголь
+
+#define PID_URANIUM_ORE                       ( 426 ) // Grouped
+#define PID_REFINED_ORE                       ( 486 ) // Grouped
+
+#define PID_MINERAL                           ( 537 ) // Минерал
+#define PID_COAL                              ( 15083 ) // Каменный уголь
+
+#define PID_METAL_ORE                         ( 536 ) // Железная руда
+#define PID_IRON_BAR                          ( 1474 ) // Железный брус
+
+#define PID_GOLD_ORE                          ( 15052 ) // Большой золотой самородок
+#define PID_GOLD_NUGGET                       ( 423 ) // Grouped
+#define PID_GOLDEN_BAR						  ( 1470 ) // Слиток золота
+
+#define PID_COPPER_BAR						  ( 15085 ) // Медный самородок
+#define PID_COPPER_ORE                        ( 15050 ) // Медная руда
+#define PID_COPPER_NUGGET					  ( 15084 ) // Медный самородок
+#define PID_COPPER_LEAF                       ( 15086 ) // Рулон листа меди
+#define PID_COPPER_WIRE                       ( 15087 ) // Моток меди
+
+#define PID_LEAD_ORE						  ( 1476 ) // Свинцовая руда
+#define PID_LEAD_NUGGET						  ( 15051 ) // Свинцовый самородок
+#define PID_LEAD_INGOT						  ( 1469 ) // Свинцовый слиток
+
+#define PID_GLASS_BAR						  ( 1484 ) // Кусок стекла
+#define PID_GLASS						      ( 1485 ) // Стекло
 
 /******************************************************************
 ***************       Effects                       ***************

@@ -1818,6 +1818,32 @@
 # define COMMAND_DROP_UID                         ( 36 )
 # define COMMAND_LOG                              ( 37 )
 
+// material types in item's proto (should be correct)
+#define MATERIAL_GLASS                           (0)
+#define MATERIAL_METAL                           (1)
+#define MATERIAL_PLASTIC                         (2)
+#define MATERIAL_WOOD                            (3)
+#define MATERIAL_DIRT                            (4)
+#define MATERIAL_STONE                           (5)
+#define MATERIAL_CEMENT                          (6)
+#define MATERIAL_LEATHER                         (7)
+#define MATERIAL_ARMORED_LEATHER                 (8)
+#define MATERIAL_POLYMER                         (9)
+#define MATERIAL_COMPOSITE                       (10)
+#define MATERIAL_FABRIC	                         (11)
+#define MATERIAL_COPPER	                         (12)
+#define MATERIAL_LEAD	                         (13)
+#define MATERIAL_GOLD	                         (14)
+#define MATERIAL_ORGANIC                         (15)
+
+// Directions
+#define DIR_NE                                   (0) // North-east
+#define DIR_E                                    (1) // East
+#define DIR_SE                                   (2) // South-east
+#define DIR_SW                                   (3) // South-west
+#define DIR_W                                    (4) // West
+#define DIR_NW                                   (5) // North-west
+
 // Game images
 # define IMAGE_RELIEF                             ( 0 ) // Global map relief
 # define IMAGE_RELIEF_TNF			(1) //global map relief tnf

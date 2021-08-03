@@ -12,6 +12,8 @@
 # include "_global_events.fos"
 # include "_ltp.fos"
 
+#include "furnace_h.fos"
+
 // Imports
 import void InitializeGame() from "config";
 import bool OnUseExplode( Critter& cr, Item& explode, Critter@ targetCr, Item@ targetItem, Scenery@ targetScen, uint timer ) from "explode";
@@ -106,6 +108,8 @@ import void AffectPoison( Critter& cr, int value ) from "poison";
 import void AffectRadiation( Critter& cr, int value ) from "radiation";
 
 import void hearshot( Critter& cr, ProtoItem& weapon, uint8 weaponMode ) from "rp_combat"; //Выстрелы на карте
+
+
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // Called before world generation.
@@ -567,6 +571,7 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
 		
     bool isKnife = ( pid == PID_COMBAT_KNIFE || pid == PID_LIL_JESUS_WEAPON || pid == PID_KNIFE || pid == PID_SWITCHBLADE || pid == PID_WAKIZASHI_BLADE || pid == PID_REVKNIFE1 || pid == PID_REVKNIFE2 );
 	
+
 	//Отдельная механика обработки топора:
 	if( pid == PID_AXE ) {
 		//Применение топора на трупах убирает тела, если есть лопата в инвентаре.
@@ -1257,29 +1262,38 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
             cr.Say(SAY_NETMSG, "use_skill "+skill+" "+((targetCr is null)?"tCr-null ":" ")+((targetItem is null)?"tIt-null ":" "));
        }*/
 
-    if( skill == SK_SCIENCE && valid(targetItem) && targetItem.GetProtoId() >= PID_RPSTUFF1 && targetItem.GetProtoId() <= PID_RPSTUFF4 ) {
+    if( skill == SK_SCIENCE && valid(targetItem) && targetItem.GetProtoId() >= PID_RPSTUFF1 && targetItem.GetProtoId() <= PID_RPSTUFF4 ) 
+    {
         targetItem.Val0 = 0;
         cr.Say( SAY_NETMSG, "Вы подготовили документ к перезаписи. Теперь на нём снова можно будет писать." );
-        if( cr.StatBase[ ST_INTELLECT ] < 7 ) {
+        if( cr.StatBase[ ST_INTELLECT ] < 7 ) 
+        {
             targetItem.SetLexems( null );
             targetItem.Update();
         }
     }
 	
-    if( onSelf && ( skill == SK_REPAIR || skill == SK_SCIENCE || skill == SK_TRAPS ) ) {
+    if( onSelf && ( skill == SK_REPAIR || skill == SK_SCIENCE || skill == SK_TRAPS ) ) 
+    {
         Map @map = cr.GetMap();
         uint16 HexX = cr.HexX, HexY = cr.HexY;
         Item @light = map.GetItem( HexX, HexY, 1305 ); //PID_OBJECT_LIGHT
-        if( !valid( light) ) {
+        if( !valid( light) ) 
+        {
             map.MoveHexByDir( HexX, HexY, cr.Dir, 1 );
             @light = map.GetItem( HexX, HexY, 1305 ); //PID_OBJECT_LIGHT
         }
-        if( valid( light ) ) {
-            if( skill == SK_REPAIR ) {
-                if( light.Val0 == 0 ) {
+        if( valid( light ) ) 
+        {
+            if( skill == SK_REPAIR ) 
+            {
+                if( light.Val0 == 0 ) 
+                {
                     cr.Say( SAY_NETMSG, "Вы включили свет." );
                     light.Val0 = 1;
-                } else {
+                } 
+                else 
+                {
                     cr.Say( SAY_NETMSG, "Вы выключили свет." );
                     light.Val0 = 0;
 					light.LightIntensity = 50; //Кстати, "выключенный" свет можно реализовать как "аварийный" режим (красные оттенки и приглушённое мерцание).
@@ -1287,15 +1301,20 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
 					light.Update(); 
                 }
             }
-            if( skill == SK_SCIENCE ) {
-                if( light.Val0 == 0 ) {
+            if( skill == SK_SCIENCE ) 
+            {
+                if( light.Val0 == 0 ) 
+                {
                     cr.Say( SAY_NETMSG, "Вы успешно демонтируете источник света." );
                     MoveItem( light, 1, cr );
-                } else {
+                } 
+                else 
+                {
                     cr.Say( SAY_NETMSG, "Сначала выключите источник света, прежде чем демонтировать его отсюда!" );
                 }
             }
-            if( skill == SK_TRAPS ) {
+            if( skill == SK_TRAPS ) 
+            {
                 light.Val1++;
                 if( light.Val1 > 5 ) light.Val1 = 1;
 				light.LightDistance = light.Val1;
@@ -1305,6 +1324,12 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
             return true; 
         }
     }
+
+    if( valid( targetItem ) && targetItem.GetProtoId() == 1311 ) // плавка чирак
+    {
+        return ShowFurnaceMenu( cr, targetItem );
+    }
+
 
     if( valid( targetItem ) && targetItem.GetType() == ITEM_TYPE_CAR && UseSkillOnCar( cr, targetItem, skill ) )
         return true;
