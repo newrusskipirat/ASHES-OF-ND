@@ -8,112 +8,112 @@
 
 
 // Light
-#define PID_LEATHER_JACKET                    ( 74 )    // Êîæàíàÿ êóðòêà
-#define PID_LEATHER_ARMOR                     ( 1 )     // Êîæàíàÿ áðîíÿ
-#define PID_LEATHER_ARMOR_MK_II               ( 379 )   // Êîæàíàÿ áðîíÿ ìîä. II
-#define PID_FIRERESIST_LEATHER_ARMOR          ( 900 )	// Îãíåñòîéêàÿ êîæàíàÿ áðîíÿ
-#define PID_CURED_LEATHER_ARMOR               ( 265 )   // Áîåâàÿ êîæàíàÿ êóðòêà
-#define PID_CURED_LEATHER_ARMOR_MK_II         ( 1033 )  // Óëó÷øåííàÿ áîåâàÿ êîæàíàÿ êóðòêà
-#define PID_LEATHER_ARMOR_MK_III			  ( 17020 ) // Êîæàíàÿ áðîíÿ ìîä. III
+#define PID_LEATHER_JACKET                    ( 74 )    // Кожаная куртка
+#define PID_LEATHER_ARMOR                     ( 1 )     // Кожаная броня
+#define PID_LEATHER_ARMOR_MK_II               ( 379 )   // Кожаная броня мод. II
+#define PID_FIRERESIST_LEATHER_ARMOR          ( 900 )	// Огнестойкая кожаная броня
+#define PID_CURED_LEATHER_ARMOR               ( 265 )   // Боевая кожаная куртка
+#define PID_CURED_LEATHER_ARMOR_MK_II         ( 1033 )  // Улучшенная боевая кожаная куртка
+#define PID_LEATHER_ARMOR_MK_III			  ( 17020 ) // Кожаная броня мод. III
 
 // Medium
-#define PID_METAL_ARMOR                       ( 2 )    // Ìåòàëëè÷åñêàÿ áðîíÿ
-#define PID_METAL_ARMOR_MK_II                 ( 380 )  // Ìåòàëëè÷åñêàÿ áðîíÿ ìîä. II
-#define PID_TESLA_ARMOR                       ( 240 )  // Áðîíÿ Òåñëà
-#define PID_COMBAT_ARMOR                      ( 17 )   // Áîåâàÿ áðîíÿ
-#define PID_COMBAT_ARMOR_MK_II                ( 381 )  // Áîåâàÿ áðîíÿ ìîä. II
-#define PID_BROTHERHOOD_COMBAT_ARMOR          ( 239 )  // Áîåâàÿ áðîíÿ "Áðàòñòâà"
-#define PID_BLACK_COMBAT_ARMOR                ( 547 )  // ×åðíàÿ áîåâàÿ áðîíÿ ìîä. II
-#define PID_MIRELURK_ARMOR                    ( 586 )  // Êóñòàðíàÿ áîåâàÿ áðîíÿ
-#define PID_MANTIS_ARMOUR                     ( 1457 ) // Õèòèíîâàÿ áðîíÿ
-#define PID_GAYARMOR                          ( 951 )  // ÁÁ-øêà ñèíÿÿ
-#define PID_GAYOUTFIT                         ( 1468 ) // ÁÁ-øêà ñèíÿÿ, íî ñî ñòàòàìè êàê îò êîæàíêè. Õîòåëè âûðåçàòü íàâåðíî.
+#define PID_METAL_ARMOR                       ( 2 )    // Металлическая броня
+#define PID_METAL_ARMOR_MK_II                 ( 380 )  // Металлическая броня мод. II
+#define PID_TESLA_ARMOR                       ( 240 )  // Броня Тесла
+#define PID_COMBAT_ARMOR                      ( 17 )   // Боевая броня
+#define PID_COMBAT_ARMOR_MK_II                ( 381 )  // Боевая броня мод. II
+#define PID_BROTHERHOOD_COMBAT_ARMOR          ( 239 )  // Боевая броня "Братства"
+#define PID_BLACK_COMBAT_ARMOR                ( 547 )  // Черная боевая броня мод. II
+#define PID_MIRELURK_ARMOR                    ( 586 )  // Кустарная боевая броня
+#define PID_MANTIS_ARMOUR                     ( 1457 ) // Хитиновая броня
+#define PID_GAYARMOR                          ( 951 )  // ББ-шка синяя
+#define PID_GAYOUTFIT                         ( 1468 ) // ББ-шка синяя, но со статами как от кожанки. Хотели вырезать наверно.
 
 // Heavy
-#define PID_POWERED_ARMOR                     ( 3 )    // Ñèëîâàÿ áðîíÿ
-#define PID_HARDENED_POWER_ARMOR              ( 232 )  // Çàêàëåííàÿ ñèëîâàÿ áðîíÿ
-#define PID_ADVANCED_POWER_ARMOR              ( 348 )  // ÀÏÀ
-#define PID_ADVANCED_POWER_ARMOR_MK2          ( 349 )  // ÀÏÀ ìîä. II
-#define PID_RUSTY_POWER_ARMOR				  ( 1469 ) // Êóñòàðíàÿ ñèëîâàÿ áðîíÿ
+#define PID_POWERED_ARMOR                     ( 3 )    // Силовая броня
+#define PID_HARDENED_POWER_ARMOR              ( 232 )  // Закаленная силовая броня
+#define PID_ADVANCED_POWER_ARMOR              ( 348 )  // АПА
+#define PID_ADVANCED_POWER_ARMOR_MK2          ( 349 )  // АПА мод. II
+#define PID_RUSTY_POWER_ARMOR				  ( 1469 ) // Кустарная силовая броня
 
 // Robes
-#define PID_PURPLE_ROBE                       ( 113 )  // Ïóðïóðíàÿ ðîáà
-#define PID_KEEPBRIGE_ROBE                    ( 524 )  // Ìàíòèÿ Ñòðàæà ìîñòà
-#define PID_BLACK_ROBE                        ( 585 )  // Ñåðàÿ ðîáà
-#define PID_SANDROBE                          ( 602 )  // Ïåñî÷íàÿ ðîáà
+#define PID_PURPLE_ROBE                       ( 113 )  // Пурпурная роба
+#define PID_KEEPBRIGE_ROBE                    ( 524 )  // Мантия Стража моста
+#define PID_BLACK_ROBE                        ( 585 )  // Серая роба
+#define PID_SANDROBE                          ( 602 )  // Песочная роба
 
 // Quest
-#define PID_JUMPSUIT                          ( 558 )  // Êîñòþì Óáåæèùà
-#define PID_FAKE_JUMPSUIT                     ( 559 )  // Ôàëüøèâûé Êîñòþì Óáåæèùà
+#define PID_JUMPSUIT                          ( 558 )  // Костюм Убежища
+#define PID_FAKE_JUMPSUIT                     ( 559 )  // Фальшивый Костюм Убежища
 
 //Mutant
-#define PID_MUMARMOR                          ( 592 )  // Ìåòàëëè÷åñêàÿ áðîíÿ ìóòàíòîâ
-#define PID_MUJACKET                          ( 593 )  // Êîæàíàÿ êóðòêà ìóòàíòîâ
+#define PID_MUMARMOR                          ( 592 )  // Металлическая броня мутантов
+#define PID_MUJACKET                          ( 593 )  // Кожаная куртка мутантов
 
 /******************************************************************
 ***************       Weapons                       ***************
 ******************************************************************/
 
 // Small Guns - Pistols
-#define PID_ZIP_GUN                           ( 300 )						// Ñàìîïàëüíûé ïèñòîëåò
-#define PID_9MM_MAUSER                        ( 122 )						// 9 ìì Ìàóçåð
-#define PID_10MM_PISTOL                       ( 8 )						    // Êîëüò 6520
-#define PID_14MM_PISTOL                       ( 22 )						// Ïèñòîëåò 14 ìì
-#define PID_DESERT_EAGLE                      ( 18 )						// Äåçåðò Èãë
-#define PID_DESERT_EAGLE_EXT_MAG              ( 404 )						// Äåçåðò Èãë (óâåë. ìàãàçèí.)
-#define PID_223_PISTOL                        ( 241 )						// Ïèñòîëåò êàëèáðà 0.223
-#define PID_44_MAGNUM_REVOLVER                ( 313 )						// Ðåâîëüâåð Ìàãíóì 0.44
-#define PID_44_MAGNUM_SPEEDLOADER             ( 398 )						// Ðåâîëüâåð Ìàãíóì 0.44 (óñê. çàðÿæàíèÿ)
-#define PID_NEEDLER_PISTOL                    ( 388 )						// Ïèñòîëåò-èíúåêòîð
-#define PID_PK12_GAUSS_PISTOL                 ( 394 )						// Ãàóññ ïèñòîëåò PPK12
-#define PID_ONEHAND_ROCKET_LAUNCHER           ( 1034 )						// Ðó÷íàÿ ïóøêà
-#define PID_FLARE_GUN                         ( 1037 )						// Ñèãíàëüíûé ïèñòîëåò
-#define PID_ANACONDA                          ( 1040 )						// Ðåâîëüâåð "Êîëüò Àíàêîíäà" 0.45
+#define PID_ZIP_GUN                           ( 300 )						// Самопальный пистолет
+#define PID_9MM_MAUSER                        ( 122 )						// 9 мм Маузер
+#define PID_10MM_PISTOL                       ( 8 )						    // Кольт 6520
+#define PID_14MM_PISTOL                       ( 22 )						// Пистолет 14 мм
+#define PID_DESERT_EAGLE                      ( 18 )						// Дезерт Игл
+#define PID_DESERT_EAGLE_EXT_MAG              ( 404 )						// Дезерт Игл (увел. магазин.)
+#define PID_223_PISTOL                        ( 241 )						// Пистолет калибра 0.223
+#define PID_44_MAGNUM_REVOLVER                ( 313 )						// Револьвер Магнум 0.44
+#define PID_44_MAGNUM_SPEEDLOADER             ( 398 )						// Револьвер Магнум 0.44 (уск. заряжания)
+#define PID_NEEDLER_PISTOL                    ( 388 )						// Пистолет-инъектор
+#define PID_PK12_GAUSS_PISTOL                 ( 394 )						// Гаусс пистолет PPK12
+#define PID_ONEHAND_ROCKET_LAUNCHER           ( 1034 )						// Ручная пушка
+#define PID_FLARE_GUN                         ( 1037 )						// Сигнальный пистолет
+#define PID_ANACONDA                          ( 1040 )						// Револьвер "Кольт Анаконда" 0.45
 
 // Small Guns - Rifles
-#define PID_HUNTING_RIFLE                     ( 10 )						// Îõîòíè÷üå ðóæüå
-#define PID_SCOPED_HUNTING_RIFLE              ( 287 )						// Îõîòíè÷üå ðóæüå ñ îïò. ïðèöåëîì
-#define PID_SPRINGER_RIFLE                    ( 299 )						// Ñàìîïàëüíîå ðóæüå
-#define PID_TOMMY_GUN                         ( 283 )						// Òîììèãàí
-#define PID_ASSAULT_RIFLE                     ( 23 )						// Øòóðìîâàÿ âèíòîâêà
-#define PID_ASSAULT_RIFLE_EXT_MAG             ( 405 )						// Øòóðìîâàÿ âèíòîâêà (óâåë. ìàãàçèí)
-#define PID_SNIPER_RIFLE                      ( 143 )						// Ñíàéïåðñêàÿ âèíòîâêà
+#define PID_HUNTING_RIFLE                     ( 10 )						// Охотничье ружье
+#define PID_SCOPED_HUNTING_RIFLE              ( 287 )						// Охотничье ружье с опт. прицелом
+#define PID_SPRINGER_RIFLE                    ( 299 )						// Самопальное ружье
+#define PID_TOMMY_GUN                         ( 283 )						// Томмиган
+#define PID_ASSAULT_RIFLE                     ( 23 )						// Штурмовая винтовка
+#define PID_ASSAULT_RIFLE_EXT_MAG             ( 405 )						// Штурмовая винтовка (увел. магазин)
+#define PID_SNIPER_RIFLE                      ( 143 )						// Снайперская винтовка
 #define PID_FN_FAL                            ( 351 )						// FN FAL
-#define PID_FN_FAL_NIGHT_SCOPE                ( 403 )						// FN FAL ÏÍÂ
+#define PID_FN_FAL_NIGHT_SCOPE                ( 403 )						// FN FAL ПНВ
 #define PID_FN_FAL_HPFA                       ( 500 )						// FN FAL HPFA
-#define PID_RED_RYDER_BB_GUN                  ( 161 )						// Ïíåâìàòè÷åñêîå ðóæüå Ðåä Ðàéäåð
-#define PID_RED_RYDER_LE_BB_GUN               ( 162 )						// Ýêñêëþçèâíîå ïíåâìàòè÷åñêîå ðóæüå Ðåä Ðàéäåð
-#define PID_JONNY_BB_GUN                      ( 261 )						// Ïíåâìàòè÷åñêîå ðóæüå Äæîííè
+#define PID_RED_RYDER_BB_GUN                  ( 161 )						// Пневматическое ружье Ред Райдер
+#define PID_RED_RYDER_LE_BB_GUN               ( 162 )						// Эксклюзивное пневматическое ружье Ред Райдер
+#define PID_JONNY_BB_GUN                      ( 261 )						// Пневматическое ружье Джонни
 #define PID_INDEPENDENT                       ( 353 )						// XL70E3
-#define PID_M72_GAUSS_RIFLE                   ( 392 )						// Ãàóññ âèíòîâêà M72
+#define PID_M72_GAUSS_RIFLE                   ( 392 )						// Гаусс винтовка M72
 
 // Small Guns - Shotguns
-#define PID_SHOTGUN                           ( 94 )						// Äðîáîâèê
-#define PID_SAWED_OFF_SHOTGUN                 ( 385 )						// Îáðåç
-#define PID_COMBAT_SHOTGUN                    ( 242 )						// Áîåâîé äðîáîâèê
-#define PID_HK_CAWS                           ( 268 )						// H&K Ø.Î.Á.Á.
-#define PID_PANCOR_JACKHAMMER                 ( 354 )						// Ïàíêîð Äæåêõàììåð
-#define PID_REMINGTON                         ( 1039 )						// Äðîáîâèê Ðåìèíãòîí 870
+#define PID_SHOTGUN                           ( 94 )						// Дробовик
+#define PID_SAWED_OFF_SHOTGUN                 ( 385 )						// Обрез
+#define PID_COMBAT_SHOTGUN                    ( 242 )						// Боевой дробовик
+#define PID_HK_CAWS                           ( 268 )						// H&K Ш.О.Б.Б.
+#define PID_PANCOR_JACKHAMMER                 ( 354 )						// Панкор Джекхаммер
+#define PID_REMINGTON                         ( 1039 )						// Дробовик Ремингтон 870
 
 // Small Guns - Pistol-machine gun
-#define PID_10MM_SMG                          ( 9 )    						// Ïèñòîëåò-ïóëåìåò 10 ìì
+#define PID_10MM_SMG                          ( 9 )    						// Пистолет-пулемет 10 мм
 #define PID_HK_P90C                           ( 296 )     					// H&K P90c
 #define PID_HK_G11                            ( 352 )  						// H&K G11
 #define PID_HK_G11E                           ( 391 )						// H&K G11E
-#define PID_GREASE_GUN                        ( 332 )						// ÏÏ Ì3À1 "Ãðèç Ãàí" 
-#define PID_MAUSER_SMG                        ( 578 )						// Ìàóçåð àâòîìàòè÷åñêèé
+#define PID_GREASE_GUN                        ( 332 )						// ПП М3А1 "Гриз Ган" 
+#define PID_MAUSER_SMG                        ( 578 )						// Маузер автоматический
 
 // Big guns
-#define PID_FLAMER                            ( 11 )						// Îãíåìåò
-#define PID_IMPROVED_FLAMETHROWER             ( 400 )						// Óñîâåðøåíñòâîâàííûé îãíåìåò
-#define PID_ROCKET_LAUNCHER                   ( 13 )						// Ãðàíàòîìåò
-#define PID_MINIGUN                           ( 12 )						// Ìèíèãàí
-#define PID_AVENGER_MINIGUN                   ( 389 )						// Ìèíèãàí "Ìñòèòåëü" // 5mm JHP
-#define PID_VINDICATOR_MINIGUN                ( 395 )						// Ìèíèãàí "Âèíäèêàòîð" // 4.7mm Caseless
-#define PID_BOZAR                             ( 350 )						// Áîçàð
-#define PID_LIGHT_SUPPORT_WEAPON              ( 355 )						// Ëåãêèé ïóëåìåò ïîääåðæêè
-#define PID_M60                               ( 387 )						// Ïóëåìåò Ì60
-#define PID_GRENADELAUNCHER                   ( 1036 )						// Ìíîãîçàðÿäíûé ãðàíàòîì¸ò M32
+#define PID_FLAMER                            ( 11 )						// Огнемет
+#define PID_IMPROVED_FLAMETHROWER             ( 400 )						// Усовершенствованный огнемет
+#define PID_ROCKET_LAUNCHER                   ( 13 )						// Гранатомет
+#define PID_MINIGUN                           ( 12 )						// Миниган
+#define PID_AVENGER_MINIGUN                   ( 389 )						// Миниган "Мститель" // 5mm JHP
+#define PID_VINDICATOR_MINIGUN                ( 395 )						// Миниган "Виндикатор" // 4.7mm Caseless
+#define PID_BOZAR                             ( 350 )						// Бозар
+#define PID_LIGHT_SUPPORT_WEAPON              ( 355 )						// Легкий пулемет поддержки
+#define PID_M60                               ( 387 )						// Пулемет М60
+#define PID_GRENADELAUNCHER                   ( 1036 )						// Многозарядный гранатомёт M32
 
 // Energo guns  Laser
 #define PID_LASER_PISTOL                      ( 16 )
@@ -133,9 +133,9 @@
 #define PID_LASER_PISTOL_LOW                  ( 1041 )
 
 // Energo guns - Pulse
-#define PID_YK32_PULSE_PISTOL                 ( 396 )						// Èìïóëüñíûé ïèñòîëåò YK32
-#define PID_YK42B_PULSE_RIFLE                 ( 397 )						// Èìïóëüñíîå ðóæüå YK42B
-#define PID_SOUND_BLASTER                     ( 594 )						// Àêóñòè÷åñêîå ðóæüå AR-91M
+#define PID_YK32_PULSE_PISTOL                 ( 396 )						// Импульсный пистолет YK32
+#define PID_YK42B_PULSE_RIFLE                 ( 397 )						// Импульсное ружье YK42B
+#define PID_SOUND_BLASTER                     ( 594 )						// Акустическое ружье AR-91M
 
 // Throwing -  Grenade
 #define PID_MOLOTOV_COCKTAIL                  ( 159 ) // Grouped
@@ -162,17 +162,17 @@
 #define PID_WAKIZASHI_BLADE                   ( 522 )
 
 // Melee -  Pricking
-#define PID_SPEAR                             ( 7 )							    // Êîïüå
-#define PID_SHARP_SPEAR                       ( 280 )							// Çàòî÷åííîå êîïüå
-#define PID_SHARPENED_POLE                    ( 320 )							// Êîë
+#define PID_SPEAR                             ( 7 )							    // Копье
+#define PID_SHARP_SPEAR                       ( 280 )							// Заточенное копье
+#define PID_SHARPENED_POLE                    ( 320 )							// Кол
 
 // Melee -  Shock
-#define PID_CLUB                              ( 5 )						     	// Äóáèíêà
-#define PID_CROWBAR                           ( 20 )							// Ìîíòèðîâêà
-#define PID_WRENCH                            ( 384 )                           // Ãàå÷íûé êëþ÷
-#define PID_SLEDGEHAMMER                      ( 6 )							    // Êóâàëäà
-#define PID_LOUISVILLE_SLUGGER                ( 386 )							// Ëóèñâèëëüñêàÿ áèòà
-#define PID_SUPER_SLEDGE                      ( 115 )  							// Ñóïåðêóâàëäà
+#define PID_CLUB                              ( 5 )						     	// Дубинка
+#define PID_CROWBAR                           ( 20 )							// Монтировка
+#define PID_WRENCH                            ( 384 )                           // Гаечный ключ
+#define PID_SLEDGEHAMMER                      ( 6 )							    // Кувалда
+#define PID_LOUISVILLE_SLUGGER                ( 386 )							// Луисвилльская бита
+#define PID_SUPER_SLEDGE                      ( 115 )  							// Суперкувалда
 
 // Melee -  Electric
 #define PID_CATTLE_PROD                       ( 160 )
@@ -551,16 +551,16 @@
 
 
 //Doors
-#define PID_DOOR_BLOCKER                     		( 16804 )						// Áëîêèðàòîð äâåðè
-#define PID_CATHEDRAL_DOOR_EW	              		( 2346 )						// Âîðîòà ñîáîðà
-#define PID_GARAGE_GATE_SMALL_EW               		( 3417 )						// Âîðîòà ãàðàæà êîðîòêèå
-#define PID_GARAGE_GATE_SMALL_NS               		( 3418 )						// Âîðîòà ãàðàæà êîðîòêèå
-#define PID_VC_GATE_SMALL_EW            	   		( 3434 )						// Âîðîòà ÃÓ êîðîòêèå
-#define PID_FARM_GATE_EW                  			( 3818 )						// Âîðîòà ôåðìû äëèííûå
-#define PID_FARM_GATE_NS                  			( 3902 )						// Âîðîòà ôåðìû äëèííûå
-#define PID_GARAGE_GATE_EW                  		( 4768 )						// Âîðîòà ãàðàæà äëèííûå
-#define PID_GARAGE_GATE_NS	                		( 4769 )						// Âîðîòà ãàðàæà äëèííûå
-#define PID_FARM_GATE_SMALL_EW             			( 22867 )						// Âîðîòà ôåðìû êîðîòêèå
+#define PID_DOOR_BLOCKER                     		( 16804 )						// Блокиратор двери
+#define PID_CATHEDRAL_DOOR_EW	              		( 2346 )						// Ворота собора
+#define PID_GARAGE_GATE_SMALL_EW               		( 3417 )						// Ворота гаража короткие
+#define PID_GARAGE_GATE_SMALL_NS               		( 3418 )						// Ворота гаража короткие
+#define PID_VC_GATE_SMALL_EW            	   		( 3434 )						// Ворота ГУ короткие
+#define PID_FARM_GATE_EW                  			( 3818 )						// Ворота фермы длинные
+#define PID_FARM_GATE_NS                  			( 3902 )						// Ворота фермы длинные
+#define PID_GARAGE_GATE_EW                  		( 4768 )						// Ворота гаража длинные
+#define PID_GARAGE_GATE_NS	                		( 4769 )						// Ворота гаража длинные
+#define PID_FARM_GATE_SMALL_EW             			( 22867 )						// Ворота фермы короткие
 
 /******************************************************************
 ***************       Misc.                         ***************
@@ -586,18 +586,18 @@
 #define PID_HYPODERMIC_NEEDLE                 ( 318 )
 #define PID_EMPTY_JET                         ( 416 )
 #define PID_BOTTLE_GLASS                      ( 542 ) // Empty glass bottle
-#define PID_BOTTLE_EMPTY                      ( 532 ) // Ïóñòàÿ áóòûëêà
-#define PID_PART_OF_ROPE                      ( 534 ) // Êóñîê âåðåâêè
-#define PID_GUNPOWDER                         ( 535 ) // Êîðîáêà ïîðîõà
-#define PID_TUBE                              ( 538 ) // Ìåòàëëè÷åñêàÿ òðóáà
-#define PID_BRAHMIN_SKIN                      ( 449 ) // Øêóðà áðàìèíà
-#define PID_MEAT                              ( 539 ) // Ìÿñî
-#define PID_CIGARETTES                        ( 541 ) // Ñèãàðåòû
-#define PID_NITROGLYCERIN                     ( 573 ) // Íèòðîãëèöåðèí
-#define PID_CHEMICALS                         ( 574 ) // Õèìèêàòû
-#define PID_TNT                               ( 575 ) // Òðîòèë
-#define PID_HEXOGEN                           ( 576 ) // Ãåêñîãåí
-#define PID_PLASTIC_EXPLOSIVES_DULL           ( 577 ) // Ïëàñòèò áåç äåòîíàòîðà
+#define PID_BOTTLE_EMPTY                      ( 532 ) // Пустая бутылка
+#define PID_PART_OF_ROPE                      ( 534 ) // Кусок веревки
+#define PID_GUNPOWDER                         ( 535 ) // Коробка пороха
+#define PID_TUBE                              ( 538 ) // Металлическая труба
+#define PID_BRAHMIN_SKIN                      ( 449 ) // Шкура брамина
+#define PID_MEAT                              ( 539 ) // Мясо
+#define PID_CIGARETTES                        ( 541 ) // Сигареты
+#define PID_NITROGLYCERIN                     ( 573 ) // Нитроглицерин
+#define PID_CHEMICALS                         ( 574 ) // Химикаты
+#define PID_TNT                               ( 575 ) // Тротил
+#define PID_HEXOGEN                           ( 576 ) // Гексоген
+#define PID_PLASTIC_EXPLOSIVES_DULL           ( 577 ) // Пластит без детонатора
 
 // Self-special parts
 #define PID_MOTOR                             ( 89 )
@@ -663,9 +663,9 @@
 
 #define PID_RESPIRATOR                        ( 1399 ) // pm
 // Other
-#define PID_SHOVEL                            ( 289 )  // Ëîïàòà
-#define PID_PLANK                             ( 297 )  // Ëîì
-#define PID_AXE                               ( 543 )  // Òîïîð
+#define PID_SHOVEL                            ( 289 )  // Лопата
+#define PID_PLANK                             ( 297 )  // Лом
+#define PID_AXE                               ( 543 )  // Топор
 #define PID_WELDING                           ( 565 )
 #define PID_WELDING_USED                      ( 566 )
 // Special
@@ -715,17 +715,17 @@
 
 // Special
 #define PID_BRIEFCASE                         ( 72 )
-#define PID_MUTAGENIC_SYRUM                   ( 329 ) // Èíüåêöèÿ îò ìóòàöèè
-#define PID_HEART_PILLS                       ( 333 ) // Òàáëåòêè îò ñåðöà
+#define PID_MUTAGENIC_SYRUM                   ( 329 ) // Иньекция от мутации
+#define PID_HEART_PILLS                       ( 333 ) // Таблетки от серца
 #define PID_SPECTACLES                        ( 415 ) // Eye glasses
 #define PID_OXYGEN_TANK                       ( 417 )
 #define PID_POISON_TANK                       ( 418 )
 #define PID_HOWITZER_SHELL                    ( 430 ) // Ammo of turret in SAD
 #define PID_MIRROR_SHADES                     ( 433 ) // Eye glasses
-#define PID_BALL_GAG                          ( 470 ) // Êëÿï
-#define PID_DAISIES                           ( 474 ) // Ãîðøîê ñ öâåòàìè
-#define PID_BOTTLE_FULL                       ( 533 ) // Ïîëíàÿ áóòûëêà
-#define PID_GLASS_BOTTLE_FULL                 ( 1627 ) // Ïîëíàÿ ñòåêëÿííàÿ áóòûëêà
+#define PID_BALL_GAG                          ( 470 ) // Кляп
+#define PID_DAISIES                           ( 474 ) // Горшок с цветами
+#define PID_BOTTLE_FULL                       ( 533 ) // Полная бутылка
+#define PID_GLASS_BOTTLE_FULL                 ( 1627 ) // Полная стеклянная бутылка
 
 #define PID_DOG_TAGS                          ( 56 )
 #define PID_ELECTRONIC_BUG                    ( 57 )
@@ -733,7 +733,7 @@
 #define PID_GOLD_LOCKET                       ( 99 )
 #define PID_TAPE_RECORDER                     ( 104 )
 #define PID_URN                               ( 112 )
-#define PID_NECKLACE                          ( 119 ) // Îæåðåëüå
+#define PID_NECKLACE                          ( 119 ) // Ожерелье
 #define PID_PSYCHIC_NULLIFIER                 ( 123 )
 #define PID_BLACK_COC_BADGE                   ( 141 ) // Habbology
 #define PID_RED_COC_BADGE                     ( 142 ) // Habbology
@@ -759,25 +759,25 @@
 #define PID_RANGER_PIN                        ( 342 ) // Ncr
 #define PID_RANGER_MAP                        ( 343 )
 #define PID_GECK                              ( 366 )
-#define PID_STABLES_ID_BADGE                  ( 413 ) // Ïðîïóñê â êàíþøíè
+#define PID_STABLES_ID_BADGE                  ( 413 ) // Пропуск в канюшни
 #define PID_RAMIREZ_BOX_CLOSED                ( 431 )
 #define PID_RAMIREZ_BOX_OPEN                  ( 432 )
-#define PID_BLONDIE_DOG_TAG                   ( 441 ) // Áèðêà
-#define PID_ANGEL_EYES_DOG_TAG                ( 442 ) // Áèðêà
-#define PID_TUCO_DOG_TAG                      ( 443 ) // Áèðêà
-#define PID_REBEL_TAG                         ( 579 ) // Áèðêà ðåéíäæåðîâ
+#define PID_BLONDIE_DOG_TAG                   ( 441 ) // Бирка
+#define PID_ANGEL_EYES_DOG_TAG                ( 442 ) // Бирка
+#define PID_TUCO_DOG_TAG                      ( 443 ) // Бирка
+#define PID_REBEL_TAG                         ( 579 ) // Бирка рейнджеров
 #define PID_RAIDERS_MAP                       ( 444 )
-#define PID_SHERIFF_BADGE                     ( 445 ) // Çíà÷åê øåðèôà
-#define PID_ACCOUNT_BOOK                      ( 448 ) // Êíèãà ïî ðàçáîðêàì â Íüþ-Ðåíî
+#define PID_SHERIFF_BADGE                     ( 445 ) // Значек шерифа
+#define PID_ACCOUNT_BOOK                      ( 448 ) // Книга по разборкам в Нью-Рено
 #define PID_TORN_PAPER_1                      ( 450 ) // Part1 password
 #define PID_TORN_PAPER_2                      ( 451 ) // Part2 password
 #define PID_TORN_PAPER_3                      ( 452 ) // Part3 password
 #define PID_PASSWORD_PAPER                    ( 453 ) // All password
-#define PID_ELRON_FIELD_REP                   ( 457 ) // Îò÷åò Õàááîëîãîâ
-#define PID_SMITTY_MEAL                       ( 468 ) // Åäà Ñìèòòè
-#define PID_ENLIGHTENED_ONE_LETTER            ( 476 ) // Äîêëàä
+#define PID_ELRON_FIELD_REP                   ( 457 ) // Отчет Хаббологов
+#define PID_SMITTY_MEAL                       ( 468 ) // Еда Смитти
+#define PID_ENLIGHTENED_ONE_LETTER            ( 476 ) // Доклад
 #define PID_FALLOUT_2_HINTBOOK                ( 483 )
-#define PID_MOUSE_SKIN                        ( 540 ) // Øêóðà ìûøè
+#define PID_MOUSE_SKIN                        ( 540 ) // Шкура мыши
 #define PID_CHOSEN_HOLO                       ( 549 )
 #define PID_CHOSEN_HOLO_DECODED               ( 550 )
 #define PID_LETTER_TO_LIN                     ( 551 )
@@ -981,7 +981,7 @@
 #define PID_GATLING_LOW                       ( 1401 )
 #define PID_DRUM_GUN_LOW                      ( 1402 )
 #define PID_SNIPER_GUN_LOW                    ( 1403 )
-#define PID_PLASMA_SMG_LOW                    ( 1404 ) //Îæåã
+#define PID_PLASMA_SMG_LOW                    ( 1404 ) //Ожег
 #define PID_SHOTPISTOL_LOW                    ( 1405 )
 #define PID_REVOLVER_LOW                      ( 1406 )
 #define PID_PISTOL_LOW                        ( 1407 )
@@ -1080,8 +1080,8 @@
 #define PID_PHOTO                             ( 1547 )
 #define PID_PILLS                             ( 1548 )
 #define PID_HYPO_BLOOD                        ( 1550 )
-#define PID_REVOLVER_PART                     ( 1680 )   // ðåâîëüâåðíûé áàðàáàí
-#define PID_SHORT_TUBE                        ( 1681 )   // êîðîòêàÿ òðóáà
+#define PID_REVOLVER_PART                     ( 1680 )   // револьверный барабан
+#define PID_SHORT_TUBE                        ( 1681 )   // короткая труба
 #define PID_TRIGGER                           ( 3852 )
 #define PID_WORKBENCH_TOKEN                   ( 3978 )
 #define PID_FIREPLACE_TOKEN                   ( 3979 )
@@ -1095,27 +1095,27 @@
 #define PID_COINPRESS_TOKEN				 	  ( 4062 )
 #define PID_SAWMILL_TOKEN				 	  ( 4063 )
 #define PID_LATHE_TOKEN					 	  ( 4064 )
-#define PID_LAB_TOKEN                         ( 4065 ) //òîêåí õèìëàáû
-#define PID_CHEM_BUFFOUT_BLACK                ( 4066 ) // òàáëåòêè äëÿ îáåççàðàæèâàíèÿ âîäû
-#define PID_BLACK_BUFFOUT_PACKAGING           ( 4067 ) // ïà÷êà òàáëåòîê äëÿ îáåççàðàæèâàíèÿ âîäû
-#define PID_cigarette                         ( 22050 )   					// Ñèãàðåòà
+#define PID_LAB_TOKEN                         ( 4065 ) //токен химлабы
+#define PID_CHEM_BUFFOUT_BLACK                ( 4066 ) // таблетки для обеззараживания воды
+#define PID_CHEM_BUFFOUT_BLACK_PACK		      ( 4067 ) // пачка таблеток для обеззараживания воды
+#define PID_cigarette                         ( 22050 )   					// Сигарета
 
 
 /******************************************************************
 ***************       Craft                         ***************
 ******************************************************************/
 
-#define PID_CRAFT_L_LINT                      ( 439 ) // pocket lint, êàðìàííûé ìóñîð
-#define PID_CRAFT_L_RAGS                      ( 572 ) // Êóñîê ìàòåðèè
-#define PID_CRAFT_L_HIDE                      ( 1512 ) // Êóñîê êîæè
+#define PID_CRAFT_L_LINT                      ( 439 ) // pocket lint, карманный мусор
+#define PID_CRAFT_L_RAGS                      ( 572 ) // Кусок материи
+#define PID_CRAFT_L_HIDE                      ( 1512 ) // Кусок кожи
 
-#define PID_CRAFT_E_LAMP                      ( 356 )  // ðàäèîäåòàëè
-#define PID_CRAFT_E_PART                      ( 55 )  // ïðèìèòèâíàÿ ïëàòà
-#define PID_CRAFT_E_CHIP                      ( 377 ) // ìèêðîñõåìû
+#define PID_CRAFT_E_LAMP                      ( 356 )  // радиодетали
+#define PID_CRAFT_E_PART                      ( 55 )  // примитивная плата
+#define PID_CRAFT_E_CHIP                      ( 377 ) // микросхемы
 
-#define PID_CRAFT_M_JUNK                      ( 98 ) // Trash, ìóñîð
-#define PID_CRAFT_M_BARS                      ( 475 ) // Ìåòàëëè÷åñêèå ÷àñòè
-#define PID_CRAFT_M_STEL                      ( 50 )  // Ñëîæíàÿ äåòàëü
+#define PID_CRAFT_M_JUNK                      ( 98 ) // Trash, мусор
+#define PID_CRAFT_M_BARS                      ( 475 ) // Металлические части
+#define PID_CRAFT_M_STEL                      ( 50 )  // Сложная деталь
 
 /******************************************************************
 ***************       Food                          ***************
@@ -1129,27 +1129,27 @@
 #define PID_COOKED_FISH							( 1556 )
 #define PID_FLAPJACK							( 1557 )
 #define PID_FLOUR								( 1558 )
-#define PID_COOKED_MOLERAT_STOMATCH				( 1559 )		// ôàðøèðîâàííûé æåëóäîê
-#define PID_SALAD								( 1560 )		// ñàëàò
+#define PID_COOKED_MOLERAT_STOMATCH				( 1559 )		// фаршированный желудок
+#define PID_SALAD								( 1560 )		// салат
 #define PID_CABBAGE								( 1615 )
 #define PID_CORN								( 10128 )
 #define PID_RAGOUT								( 1563 )
-#define PID_MUSH_GREEN							( 1564 )		//ãðèáû-çâåçäî÷êè
-#define PID_SHIT_BIG							( 1598 )		//Êîìïîñò
-#define PID_SHIT_SMALL							( 1599 )		//Êîìïîñò ñóõîé
-#define PID_GLASS_BOTTLE_DIRTY_FULL				( 22087 ) 		// ãðÿçíàÿ âîäà â ñòåêëå
-#define PID_BOTTLE_DIRTY_FULL					( 22086 )		// ãðÿçíàÿ âîäà â ïëàñòèêå
+#define PID_MUSH_GREEN							( 1564 )		//грибы-звездочки
+#define PID_SHIT_BIG							( 1598 )		//Компост
+#define PID_SHIT_SMALL							( 1599 )		//Компост сухой
+#define PID_GLASS_BOTTLE_DIRTY_FULL				( 22087 ) 		// грязная вода в стекле
+#define PID_BOTTLE_DIRTY_FULL					( 22086 )		// грязная вода в пластике
 
 /******************************************************************
 ***************       Farmer's items                ***************
 ******************************************************************/
 
-#define PID_SHIT_BIG							( 1598 )		//Êîìïîñò
-#define PID_SHIT_SMALL							( 1599 )		//Êîìïîñò ñóõîé
-#define PID_SEED_RADCVET						( 1600 )		//Ñåìåíà ðàä-öâåòà
-#define PID_SEED_CABBAGE						( 1610 )		//Ñåìåíà êàïóñòû
-#define PID_SEED_CORN							( 1620 )		//Ñåìåíà êóêóðóçû
-#define PID_SEED_MARIJUANA						( 10109 )		//Ñåìåíà Ìàðèâàííû
+#define PID_SHIT_BIG							( 1598 )		//Компост
+#define PID_SHIT_SMALL							( 1599 )		//Компост сухой
+#define PID_SEED_RADCVET						( 1600 )		//Семена рад-цвета
+#define PID_SEED_CABBAGE						( 1610 )		//Семена капусты
+#define PID_SEED_CORN							( 1620 )		//Семена кукурузы
+#define PID_SEED_MARIJUANA						( 10109 )		//Семена Мариванны
 
 #define PID_BROC_FARM							(16800) 
 #define PID_XANDER_FARM							(16801)
@@ -1159,39 +1159,39 @@
 /******************************************************************
 ************** MINING STUFF   *************************************
 ******************************************************************/
-#define PID_ORE_2							  		( 8003 ) 						// Ðóäà ¹1
-#define PID_ORE_1							  		( 8004 ) 						// Ðóäà ¹2
-#define PID_ROCKFALL						  		( 7909 ) 						// Îáâàë/çàâàë
-#define PID_BOULDER							  		( 7910 ) 						// Âàëóí (ïóñòàÿ ïîðîäà)
+#define PID_ORE_2							  		( 8003 ) 						// Руда №1
+#define PID_ORE_1							  		( 8004 ) 						// Руда №2
+#define PID_ROCKFALL						  		( 7909 ) 						// Обвал/завал
+#define PID_BOULDER							  		( 7910 ) 						// Валун (пустая порода)
 
-#define PID_COAL_1									( 16798 )							// Óãîëü-1
-#define PID_COAL_2									( 16799 )							// Óãîëü-2
+#define PID_COAL_1									( 16798 )							// Уголь-1
+#define PID_COAL_2									( 16799 )							// Уголь-2
 
 #define PID_URANIUM_ORE                       ( 426 ) // Grouped
 #define PID_REFINED_ORE                       ( 486 ) // Grouped
 
-#define PID_MINERAL                           ( 537 ) // Ìèíåðàë
-#define PID_COAL                              ( 15083 ) // Êàìåííûé óãîëü
+#define PID_MINERAL                           ( 537 ) // Минерал
+#define PID_COAL                              ( 15083 ) // Каменный уголь
 
-#define PID_METAL_ORE                         ( 536 ) // Æåëåçíàÿ ðóäà
-#define PID_IRON_BAR                          ( 1474 ) // Æåëåçíûé áðóñ
+#define PID_METAL_ORE                         ( 536 ) // Железная руда
+#define PID_IRON_BAR                          ( 1474 ) // Железный брус
 
-#define PID_GOLD_ORE                          ( 15052 ) // Áîëüøîé çîëîòîé ñàìîðîäîê
+#define PID_GOLD_ORE                          ( 15052 ) // Большой золотой самородок
 #define PID_GOLD_NUGGET                       ( 423 ) // Grouped
-#define PID_GOLDEN_BAR						  ( 1470 ) // Ñëèòîê çîëîòà
+#define PID_GOLDEN_BAR						  ( 1470 ) // Слиток золота
 
-#define PID_COPPER_BAR						  ( 15085 ) // Ìåäíûé ñàìîðîäîê
-#define PID_COPPER_ORE                        ( 15050 ) // Ìåäíàÿ ðóäà
-#define PID_COPPER_NUGGET					  ( 15084 ) // Ìåäíûé ñàìîðîäîê
-#define PID_COPPER_LEAF                       ( 15086 ) // Ðóëîí ëèñòà ìåäè
-#define PID_COPPER_WIRE                       ( 15087 ) // Ìîòîê ìåäè
+#define PID_COPPER_BAR						  ( 15085 ) // Медный самородок
+#define PID_COPPER_ORE                        ( 15050 ) // Медная руда
+#define PID_COPPER_NUGGET					  ( 15084 ) // Медный самородок
+#define PID_COPPER_LEAF                       ( 15086 ) // Рулон листа меди
+#define PID_COPPER_WIRE                       ( 15087 ) // Моток меди
 
-#define PID_LEAD_ORE						  ( 1476 ) // Ñâèíöîâàÿ ðóäà
-#define PID_LEAD_NUGGET						  ( 15051 ) // Ñâèíöîâûé ñàìîðîäîê
-#define PID_LEAD_INGOT						  ( 1469 ) // Ñâèíöîâûé ñëèòîê
+#define PID_LEAD_ORE						  ( 1476 ) // Свинцовая руда
+#define PID_LEAD_NUGGET						  ( 15051 ) // Свинцовый самородок
+#define PID_LEAD_INGOT						  ( 1469 ) // Свинцовый слиток
 
-#define PID_GLASS_BAR						  ( 1484 ) // Êóñîê ñòåêëà
-#define PID_GLASS						      ( 1485 ) // Ñòåêëî
+#define PID_GLASS_BAR						  ( 1484 ) // Кусок стекла
+#define PID_GLASS						      ( 1485 ) // Стекло
 
 /******************************************************************
 ***************       Effects                       ***************
