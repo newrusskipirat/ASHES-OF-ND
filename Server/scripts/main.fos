@@ -924,7 +924,7 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
         return true;
     }
 
-    if( pid == PID_CHEM_BUFFOUT_BLACK_PACK )
+    if( pid == PID_CHEM_BUFFOUT_BLACK_PACKING )
     {
     	if(item.Val0 > 9)
     	{
