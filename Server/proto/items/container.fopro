@@ -1766,18 +1766,16 @@ Container.ContVolume=5000
 [Proto]
 Pid=1311
 Type=8
-ScriptModule=test
-ScriptFunc=FurnaceInit
 PicMapName=art\scenery\firepit.frm
 PicInvName=art\scenery\firepit.frm
-Flags=268439580
+Flags=838865432
 DisableEgg=1
-Weight=226796
-Volume=1
-SoundId=65
-Material=1
-Container.ContVolume=5000
-Container.Changeble=1
+Weight=50000
+Volume=500
+SoundId=48
+Material=5
+Container_Volume=5000
+StartValue_1=24000
 
 [Proto]
 Pid=1899

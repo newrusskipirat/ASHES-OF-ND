@@ -1,0 +1,34 @@
+// Author: Anuri
+
+//Перечень горючих материалов и поджигаемых объектов
+#ifndef FIRESTARTER_H
+#define FIRESTARTER_H
+
+#define STATE						Val0 								// Статус 0 - потухло, 1 - горит
+#define MAX_FUEL 					Val1 								// Макс допустимый заряд (верхний передел) 
+#define CURRENT_FUEL				Val2 								// Текущий заряд
+#define EVENT 						Val3 								// Для записи тайм-ивента горения костров и бочек, дыма и пара
+#define FIRE_STRENGTH				Val4 								// Сила горения дикого огня
+#define FIRE_TIMER 					Val5 								// Время горения дикого огня
+#define FIRE_BURNING_TIME			REAL_SECOND( 5 ) 					// Время тика горения рукотворного огня
+#define WILD_FIRE_BURNING_TIME 		REAL_SECOND( Random( 4, 10 ) )  	// Время тика горения дикого огня
+#define EXPLOSION_TIMEOUT			Val6 								// Для записи тайм-ивента взрыва
+#define FIRE_MARKER					Val7 								// Маркер огня ( для проверки на силу )
+#define LIQUID_AMOUNT				Val8								// Кол-во жидкости в разливаемом топливе 
+#define ATTACKER_ID					Val9 								// Атакующий для дикого огня
+
+#define REMAINING_USES 				Val0								// Кол-во юзов у воды / фляги
+#define DNA							Val1								// Proto содержимого фляги
+#define EXTRA_WEIGHT				Val2								// доп вес
+
+#define FUEL_BURN_AMMOUNT			( 45 )								// кол-во сжигаемого топлива
+
+const uint16[] FireFuel =		{ PID_FIREWOOD };
+const uint16[] Igniters =		{ PID_LIGHTER, PID_FLINT };
+const uint16[] WaterSource =	{ PID_GLASS_BOTTLE_DIRTY_FULL, PID_BOTTLE_DIRTY_FULL, PID_BOTTLE_FULL, PID_GLASS_BOTTLE_FULL };
+
+	#ifndef FIRESTARTER
+
+	#endif //FIRESTARTER
+	
+#endif //FIRESTARTER_H
