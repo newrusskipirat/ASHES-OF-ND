@@ -7360,7 +7360,20 @@ Stackable=1
 Weight=92
 Volume=1
 SoundId=48
-Cost=250
+Cost=15
+Material=1
+
+[Proto] # PID_CHEM_BUFFOUT_BLACK_PACK {Пачка таблеток для обеззараживания воды}
+ProtoId=4067
+Type=5
+PicMap=art\items\syrign2.png
+PicInv=art\inven\syring2.frm
+Flags=436207640
+DisableEgg=1
+Weight=150
+Volume=1
+SoundId=48
+Cost=150
 Material=1
 
 [Proto]

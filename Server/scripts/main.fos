@@ -905,22 +905,33 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
         return true;
 
     // обеззараживание воды
+
     Item@ chemItem = cr.GetItem( 0, 1 );
+
     if( ( pid == PID_GLASS_BOTTLE_DIRTY_FULL || pid == PID_BOTTLE_DIRTY_FULL ) && useOnSelf && valid(chemItem) && chemItem.GetProtoId() == PID_CHEM_BUFFOUT_BLACK )
     {
         uint16 bottlePID = (pid == PID_GLASS_BOTTLE_DIRTY_FULL) ? PID_GLASS_BOTTLE_FULL : PID_BOTTLE_FULL;
 
-        chemItem.Val0++;   
         _SubItem ( item, 1 );
+        _SubItem ( chemItem, 1 );
         cr.AddItem( bottlePID, 1 );
-
-        if (chemItem.Val0 > 4)
-        { 
-            _SubItem ( chemItem, 1 );
-            cr.Say( SAY_NETMSG, "Ваша таблетка иссякла.");
-        }
-
+        cr.Say( SAY_NETMSG, "Вы использовали таблетку для обеззараживания воды." );
         return true;
+    }
+
+    if( pid == PID_CHEM_BUFFOUT_BLACK_PACK )
+    {
+    	if(item.Val0 > 9)
+    	{
+    		_SubItem ( item, 1 );
+    		cr.Say( SAY_NETMSG, "Пачка пуста." );
+    		return true;
+    	}
+
+    	item.Val0++;
+    	cr.AddItem( PID_CHEM_BUFFOUT_BLACK, 1 );
+ 		cr.Say( SAY_EMOTE_ON_HEAD, "достаёт таблетку из пачки" );
+    	return true;
     }
 
 	int ItemType = item.GetType();
@@ -1038,19 +1049,21 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
 		cr.Say( SAY_NETMSG , "Вы достали сигарету из пачки");
 		item.Val0++;
 		cr.AddItem ( PID_cigarette , 1);
-		if (item.Val0 >19)
-		{ _SubItem (item, 1);
-		cr.Say( SAY_NETMSG, "Это была последняя");}
+		if (item.Val0 > 19)
+		{ 
+			_SubItem (item, 1);
+			cr.Say( SAY_NETMSG, "Это была последняя");
+		}
 		return true;
 	}
     if( pid == PID_cigarette )
     {
 		if (cr.CountItem( PID_LIGHTER ) > 0)
 		{
-        cr.SayMsg( SAY_EMOTE_ON_HEAD, TEXTMSG_TEXT, STR_CIGARETTES_SMOKE );
-		_SubItem( item, 1 );
-		cr.StatBase[ ST_EXPERIENCE ] += Random( 100, 300 );
-		AffectPoison( cr, Random( 5, 10 ) );
+	        cr.SayMsg( SAY_EMOTE_ON_HEAD, TEXTMSG_TEXT, STR_CIGARETTES_SMOKE );
+			_SubItem( item, 1 );
+			cr.StatBase[ ST_EXPERIENCE ] += Random( 100, 300 );
+			AffectPoison( cr, Random( 5, 10 ) );
 		}
 		else  cr.Say( SAY_NETMSG, "Вам нужна зажигалка");
 		return true;
