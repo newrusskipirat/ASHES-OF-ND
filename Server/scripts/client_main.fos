@@ -3131,7 +3131,8 @@ string critter_description( CritterCl& cr, int lookType )
                 }
             }
         }
-        if( valid( item3 ) && ( item3.GetProtoId() == PID_SANDROBE ) )
+		
+        if( HiddenFace( cr ) )
             result += ", лицо скрыто капюшоном";
         else
         {
@@ -5224,4 +5225,10 @@ void Harvesting( int pid, int hand, int param2, string@ param3, int[] @ param4 )
 	//	+ ( Looted ? ( " и находите " + ResourceName + ".") : ( " но ничего не находите. " + (Success ? "" : "[" + pid + "]") ) ) );
 	if( Success ) RunServerScriptUnsafe( "main@unsafe_Harvesting", resourcePID, Looted ? 1 : 0, 0, null, null );
 	RunServerScriptUnsafe( "main@unsafe_SayText", SAY_EMOTE_ON_HEAD, 0, 0, "осматривает " + SceneryName, null );
+}
+
+bool HiddenFace( CritterCl@ cr )
+{
+	if( !valid( cr ) ) return false;
+	return cr.ParamBase[CR_HIDDEN_FACE] != 0;
 }

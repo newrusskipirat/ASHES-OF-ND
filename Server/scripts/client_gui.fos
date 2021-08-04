@@ -1021,6 +1021,11 @@ class GUIScreen : IGUIScreenOpt
 				RunServerScriptUnsafe( "external_unsafe@unsafe_reload", 0, 0, 0, null, null );
                 return true;
             }
+			if( KeyPressed[ DIK_RMENU ] && key == DIK_M )
+			{
+				RunServerScriptUnsafe( "critter_item_movement@unsafe_ShowHideFace", 0, 0, 0, null, null );
+				return true;
+			}
             /*
 
                if(key>=DIK_1 && key<=DIK_5 && __ctrlDown)

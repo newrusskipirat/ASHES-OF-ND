@@ -166,7 +166,7 @@ bool start()
     SetSendParameter( MODE_NO_LOOT, true );
     SetSendParameter( MODE_NO_FLATTEN, true );
     SetSendParameter( MODE_NO_TALK, true );
-    // 3d animation layers
+	// 3d animation layers
 // #ifdef PLAYERS_3D
     // Enable sending 3d layers, from Skin to Backpack
     uint fromLayer = ST_ANIM3D_LAYERS + ANIM3D_LAYER_SKIN;
@@ -193,6 +193,8 @@ bool start()
     SetSendParameter( ST_BODY_TYPE, true );
 
     SetSendParameter( QST_MEDIUM, true );
+	
+    SetSendParameter( CR_HIDDEN_FACE, true );
 
     // Send item data masks
     // Look fields in fonline.h 'struct Item::ItemData'

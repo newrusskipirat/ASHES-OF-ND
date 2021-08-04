@@ -103,9 +103,13 @@ bool NameClick( CritterCl@ target, int click )
     }
     if( console_name.length() > 0 )
     {
-        if( !(target is null) && click == MOUSE_CLICK_LEFT )
+        if( valid( target ) && click == MOUSE_CLICK_LEFT )
         {
-            if( RememberName( target.Id, console_name ) )
+			if( HiddenFace( target ) )
+			{
+				return false;
+			}
+			else if( RememberName( target.Id, console_name ) )
             {
                 // target.Name=console_name;
                 updateNick( target );
@@ -156,6 +160,12 @@ void _rememberChar( int param0, int param1, int param2, string@ param3, int[] @ 
         return;
     }
 
+	if( HiddenFace( target ) )
+	{
+		Message( "Вы не можете запомнить личность в робе." );
+		return;
+	}
+	
     if( RememberName( Target_id, param3 ) )
     {
         // target.Name=param3;
@@ -239,7 +249,7 @@ bool RememberName( uint id, string& name )
 
 string@ GetName( uint id )
 {
-    uint    hash = getHash( id, VERSION_HASH );
+	uint    hash = getHash( id, VERSION_HASH );
 
     string@ s_temp = null;
     for( uint i = 0; i < CritterNames.length(); i++ )
@@ -506,6 +516,15 @@ void LoadNames()
     Message( "Вы вспомнили имен: " + t_count2 );
 }
 
+import bool HiddenFace( CritterCl@ cr ) from "client_main";
+
+void updateNick( int param0, int param1, int param2, string@ param3, int[] @ param4 )
+{
+	CritterCl@ target = GetCritter( param0 );
+	if( !valid( target ) ) return;
+	
+	updateNick( target );
+}
 
 bool updateNick( CritterCl& cr )
 {
@@ -558,9 +577,17 @@ bool updateNick( CritterCl& cr )
     }
     else if( !(s_temp is null) )
     {
-        if( cr.IsPlayer() )
-            cr.Name = s_temp;
-        cr.NameOnHead = s_temp + s_crid;
+		if( HiddenFace( cr ) && GetChosen().Id != cr.Id )
+		{
+			cr.Name = "???";
+			cr.NameOnHead = "|0x00000000 ";
+		}
+		else
+		{
+			if( cr.IsPlayer() )
+				cr.Name = s_temp;
+			cr.NameOnHead = s_temp + s_crid;
+		}
     }
     else if( cr.IsNpc() )
     {
