@@ -1446,7 +1446,7 @@ void unsafe_openCodeDoor( Critter& player, int itemId, int code, int param2, str
     if( ( player.HexX < item.HexX + 2 || player.HexX > item.HexX - 2 ) && ( player.HexY < item.HexY + 2 || player.HexY > item.HexY - 2 ) )
     {
         if( param2 != 0 ) {
-			uint max = pow( 10, item.Val1-1 );
+			int max = pow( 10, item.Val1-1 );
 			if( code > 65535 )
 				player.Say( SAY_NETMSG, "Код не может быть больше 65535!" );
             if( code < max )
@@ -1616,7 +1616,6 @@ void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@
 
     bool isFlareGun = ( realweapon.AmmoPid == PID_FLARE_GUN_AMMO ) && ( mode == 1 ); // pm added flare gun
     bool isRocket = ( realweapon.AmmoPid == PID_EXPLOSIVE_ROCKET ) || ( realweapon.AmmoPid == PID_ROCKET_AP ) || ( realweapon.AmmoPid == PID_ROBO_ROCKET_AMMO ) || ( realweapon.AmmoPid == PID_GRENADELAUNCHER_AMMO );
-    if( _WeaponSkill( weapon, mode ) != SK_THROWING && !isRocket && !isFlareGun ) return;
  
     int wpnMaxDist = _WeaponMaxDist( weapon, mode );
     if( _WeaponSkill( weapon, mode ) == SK_THROWING )

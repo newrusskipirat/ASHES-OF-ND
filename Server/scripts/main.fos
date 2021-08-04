@@ -1465,10 +1465,7 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
 			ChangeCritterSpeed( cr );  
 		}
 		return false;
-
-		cr.Say( SAY_NETMSG, "Из этого ничего не вышло." );
-		return true;
-    break; }
+	}
     case SKILL_TAKE_CONT:     // Take item from container, only targetItem is valid
         if( targetItem.Accessory == ACCESSORY_CONTAINER && targetItem.ContainerId != 0 )
         {
@@ -1996,10 +1993,10 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
 	}
 	
     default:
-    {
-        cr.SayMsg( SAY_NETMSG, TEXTMSG_GAME, STR_USE_NOTHING );
-    }
-    break;
+		{
+			cr.SayMsg( SAY_NETMSG, TEXTMSG_GAME, STR_USE_NOTHING );
+			break;
+		}
     }
     return manager_critter_use_skill( cr, skill, targetCr, targetItem, targetScen  );
 }
@@ -3909,9 +3906,11 @@ bool canPutItemInContainer( Item@ item, Item@ container )
 	};
 	
 	if( regular_container_pids.find( container_pid ) != -1 )
-		{return true; Log("zaebis");}
+		return true; 
+	
 	if( pid == container_pid )
 		return false;
+	
 	return true;
 }
 

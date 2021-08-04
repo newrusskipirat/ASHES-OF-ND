@@ -1702,6 +1702,7 @@ int to_hit_hex()
     CritterCl@ chosen = GetChosen();
     if( !chosen.IsLife() )
         return 0;
+	
     CritterCl@ target = GetMonitorCritter( __MouseX, __MouseY );
     if( valid( target ) )
         return 0;
@@ -1710,6 +1711,7 @@ int to_hit_hex()
     ProtoItem@ weapon = chosen.GetSlotProto( SLOT_HAND1, mode );
     if( weapon is null )
         return 0;
+	
     uint    skillNum = _WeaponSkill( weapon, mode );
     int     dmgType = _WeaponDmgType( weapon, mode );
 
@@ -1721,8 +1723,8 @@ int to_hit_hex()
     if( valid( realWeapon ) )
         isRocket = ( realWeapon.AmmoPid == PID_EXPLOSIVE_ROCKET ) || ( realWeapon.AmmoPid == PID_ROCKET_AP ) || ( realWeapon.AmmoPid == PID_ROBO_ROCKET_AMMO ) || ( realWeapon.AmmoPid == PID_GRENADELAUNCHER_AMMO );
 
-    if( !isFlareGun && !isRocket && ( skillNum != SK_THROWING || !( dmgType == DAMAGE_PLASMA || dmgType == DAMAGE_EMP || dmgType == DAMAGE_EXPLODE ) ) )
-        return 0;
+    // if( !isFlareGun && !isRocket && ( skillNum != SK_THROWING || !( dmgType == DAMAGE_PLASMA || dmgType == DAMAGE_EMP || dmgType == DAMAGE_EXPLODE ) ) )
+        // return 0;
 
     if( valid( realWeapon ) && skillNum != SK_THROWING )
         if( realWeapon.AmmoCount == 0 )
