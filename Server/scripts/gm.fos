@@ -561,8 +561,6 @@ GMCommand( unsafe_help )
         f.writeString( date + "\t" + type + "\t" + player.Id  + "\t" + GetPlayerName( player.Id ) + "\t" + "\t" + param3 + "\n" );
         f.close();
     }
-    else
-        Log( "can't open!" );
 }
 
 GMCommand( read_help )
@@ -581,8 +579,6 @@ GMCommand( read_help )
         }
         f.close();
     }
-    else
-        Log( "can't open!" );
 }
 
 class Poll
@@ -1932,8 +1928,6 @@ void ask_GM_PANNEL_SELF_ID_CHARLIST( Critter& player, uint answerI, string& answ
             player.Say( SAY_NETMSG, "чарлист игрока " + GetPlayerName( number ) + "  " + number + " записан" );
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
 }
 
@@ -2201,8 +2195,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 1 )
     {
@@ -2228,8 +2220,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 2 )
     {
@@ -2255,8 +2245,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 3 )
     {
@@ -2282,8 +2270,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 4 )
     {
@@ -2309,8 +2295,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 5 )
     {
@@ -2336,8 +2320,6 @@ void answer_GM_PANNEL_SELF_LOG( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 9 && cr.GetAccess() > ACCESS_MODER )
     {
@@ -2364,8 +2346,6 @@ void answer_GM_PANNEL_SELF_LOG_CLEAN( Critter& player, uint answerI, string& ans
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 1 )
     {
@@ -2375,8 +2355,6 @@ void answer_GM_PANNEL_SELF_LOG_CLEAN( Critter& player, uint answerI, string& ans
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 2 )
     {
@@ -2386,8 +2364,6 @@ void answer_GM_PANNEL_SELF_LOG_CLEAN( Critter& player, uint answerI, string& ans
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 3 )
     {
@@ -2397,8 +2373,6 @@ void answer_GM_PANNEL_SELF_LOG_CLEAN( Critter& player, uint answerI, string& ans
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
 }
 

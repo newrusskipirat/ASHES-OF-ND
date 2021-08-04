@@ -1376,8 +1376,6 @@ void answer_GmPistol_GM_menu( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 1 )
     {
@@ -1403,8 +1401,6 @@ void answer_GmPistol_GM_menu( Critter& cr, uint answerI, string& answerS )
             }
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 2 )
     {
@@ -1414,8 +1410,6 @@ void answer_GmPistol_GM_menu( Critter& cr, uint answerI, string& answerS )
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
     if( answerI == 3 )
     {
@@ -1425,8 +1419,6 @@ void answer_GmPistol_GM_menu( Critter& cr, uint answerI, string& answerS )
             // f.writeString("");
             f.close();
         }
-        else
-            Log( "can't open!" );
     }
 }
 

@@ -73,8 +73,7 @@ class LogUnit : Serializator
             SetCurPos( DataSize );
             return true;
         }
-        else
-            Log( "can't open!" );
+
         return false;
     }
 
