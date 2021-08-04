@@ -227,6 +227,48 @@ void UseDrug( Critter& cr, Item& drug ) // Export
 
 void UseDrugOn( Critter& cr, Critter@ onCr, Item& drug ) // Export
 {
+    uint16 drugPID = drug.GetProtoId();
+    uint16 stimType = 0;
+    uint16 healDebuff = 0;
+
+    switch( drugPID )
+    {
+        case PID_STIMPAK:
+            stimType = 1;
+            healDebuff = Random(20, 35);
+
+        case PID_SUPER_STIMPAK:
+            stimType = 2;
+            healDebuff = Random(15, 25);
+    }
+
+    if( cr.Id != onCr.Id && stimType != 0 && onCr.IsDead() && onCr.Anim2Dead <= ANIM2_DEAD_BACK)
+    {
+        Map@ map = onCr.GetMap();
+
+        for( int dx = -1; dx < 2; dx++ )
+        {
+            for( int dy = -1; dy < 2; dy++ )
+            {
+                if( map.IsHexPassed( onCr.HexX + dx, onCr.HexY + dy ) )
+                {
+                    onCr.TransitToHex( onCr.HexX + dx, onCr.HexY + dy, onCr.Dir );
+                    break;
+                }
+            }
+        }
+
+        _SubItem( drug, 1 );
+        onCr.ToLife();
+        onCr.ToKnockout( KNOCKOUT_ANIM2_DEFAULT( true ), 1000, onCr.HexX, onCr.HexY );
+        
+        onCr.StatBase[ ST_CURRENT_HP ] = -20;
+        onCr.StatBase[ST_MAX_LIFE] -= healDebuff;
+
+        onCr.Say( SAY_NETMSG, "|0xFFFF00 Ваш организм получил шанс на выживание, но ваше здоровье никогда не станет прежним." );
+        return;           
+    }
+
 	if( cr.Id != onCr.Id ) 
 	{
 		if( onCr.IsDead() )
