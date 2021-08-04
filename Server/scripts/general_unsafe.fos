@@ -1599,10 +1599,11 @@ void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@
         return;
     Item@ realweapon = @realweapons.first();
 
-    uint8 			mode = realweapon.Mode;
-    ProtoItem@ 	weapon = GetProtoItem( realweapon.GetProtoId() ),
-    // 				weapon = player.GetSlotProto(SLOT_HAND1, mode);
-					ammo = null;
+    uint8 mode = realweapon.Mode;
+    ProtoItem@ weapon = GetProtoItem( realweapon.GetProtoId() );
+	ProtoItem@ ammo = null;
+
+	// weapon = player.GetSlotProto(SLOT_HAND1, mode);
 
 
     uint16 toHx = hexX, toHy = hexY;
@@ -1624,12 +1625,12 @@ void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@
 		val0 = 3 * MIN( 10, val0 );
         wpnMaxDist = MIN( wpnMaxDist, val0 );
 	}	
+
     if( dist > wpnMaxDist )
     {
         player.SayMsg( SAY_NETMSG, TEXTMSG_COMBAT, 102 );
         return;
     }
-
 
     if( player.Stat[ ST_CURRENT_AP ] < int( _WeaponApCost( weapon, mode ) ) )
         return;
@@ -1647,6 +1648,7 @@ void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@
 
     player.ParamBase[ ST_CURRENT_AP ] -= _WeaponApCost( weapon, mode ) * 100;
     // HIT_LOCATION_UNCALLED
+
     CombatAttack( player, target, weapon, mode, ammo, uint16( hexX ), uint16( hexY ) );
 }
 
