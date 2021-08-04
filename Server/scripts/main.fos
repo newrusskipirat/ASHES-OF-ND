@@ -1225,7 +1225,7 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
 
 		Map@ map = cr.GetMap();
 		if( !valid(map) ) return false;
-		Item@ holder = map.GetItem( cr.HexX, cr.HexY, PID_POPUP );
+		Item@ holder = map.GetItem( targetScen.HexX, targetScen.HexY, PID_POPUP );
 		if( !valid(holder) ) {
 			Item@ hand = cr.GetItem( 0, SLOT_HAND1 );
 			cr.RunClientScript( "client_main@Harvesting", targetScen.ProtoId, valid(hand) ? hand.GetProtoId() : 0, 0, null, null );
@@ -1241,7 +1241,7 @@ bool critter_use_skill( Critter& cr, int skill, Critter@ targetCr, Item@ targetI
 
 		Map@ map = cr.GetMap();
 		if( !valid(map) ) return false;
-		Item@ holder = map.GetItem( cr.HexX, cr.HexY, PID_POPUP );
+		Item@ holder = map.GetItem( targetScen.HexX, targetScen.HexY, PID_POPUP );
 		if( !valid(holder) ) {
 			Item@ hand = cr.GetItem( 0, SLOT_HAND1 );
 			cr.RunClientScript( "client_main@Harvesting", targetItem.GetProtoId(), valid(hand) ? hand.GetProtoId() : 0, 0, null, null );
@@ -3749,9 +3749,13 @@ void unsafe_Harvesting( Critter& player, int pid, int looted, int param2, string
 	else {
 		Map@ map = player.GetMap();
 		if( !valid(map) ) return;
-		Item@ holder = map.AddItem( player.HexX, player.HexY, PID_POPUP , 1 );
+		
+        uint16 HexX = player.HexX, HexY = player.HexY;
+        map.MoveHexByDir( HexX, HexY, player.Dir, 1 );
+		
+		Item@ holder = map.AddItem( HexX, HexY, PID_POPUP , 1 );
 		uint[] values = { holder.Id };
-		CreateTimeEvent( __FullSecond + REAL_MINUTE( Random( 5, 90 ) ), "e_RefreshLoot", values, false );
+		CreateTimeEvent( __FullSecond + REAL_HOUR( Random( 3, 4 ) ), "e_RefreshLoot", values, false );
 		int time = ( 11 - player.Stat[ ST_LUCK ] ) * REAL_SECOND( 3 );
 		player.AddTimeEvent( "cte_Tired", time, CTE_TIRED, 0 );
 		player.TimeoutBase[ TO_SK_REPAIR ] = __FullSecond + time;
