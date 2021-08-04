@@ -230,42 +230,45 @@ void UseDrugOn( Critter& cr, Critter@ onCr, Item& drug ) // Export
     uint16 drugPID = drug.GetProtoId();
     uint16 stimType = 0;
     uint16 healDebuff = 0;
+    uint16 skillDebuff = 0;
 
     switch( drugPID )
     {
         case PID_STIMPAK:
+        {
             stimType = 1;
-            healDebuff = Random(20, 35);
+            healDebuff = Random(25, 45);
+            skillDebuff = 60 - ( onCr.StatBase[ ST_ENDURANCE ] + onCr.StatBase[ ST_LUCK ] + cr.StatBase[ ST_LUCK ] );
+        }
 
         case PID_SUPER_STIMPAK:
+        {
             stimType = 2;
-            healDebuff = Random(15, 25);
+            healDebuff = Random(10, 25);
+            skillDebuff = 45 - ( onCr.StatBase[ ST_ENDURANCE ] + onCr.StatBase[ ST_LUCK ] + cr.StatBase[ ST_LUCK ] );
+        }
     }
 
     if( cr.Id != onCr.Id && stimType != 0 && onCr.IsDead() && onCr.Anim2Dead <= ANIM2_DEAD_BACK)
     {
         Map@ map = onCr.GetMap();
 
-        for( int dx = -1; dx < 2; dx++ )
+        for( uint16 i = SK_SMALL_GUNS; i <= SK_OUTDOORSMAN; i++ )
         {
-            for( int dy = -1; dy < 2; dy++ )
-            {
-                if( map.IsHexPassed( onCr.HexX + dx, onCr.HexY + dy ) )
-                {
-                    onCr.TransitToHex( onCr.HexX + dx, onCr.HexY + dy, onCr.Dir );
-                    break;
-                }
-            }
+            onCr.SkillBase[ i ] -= skillDebuff;
+
+            if( onCr.Skill[ i ] < 1 )
+                onCr.SkillBase[ i ] = 1;
         }
 
         _SubItem( drug, 1 );
         onCr.ToLife();
         onCr.ToKnockout( KNOCKOUT_ANIM2_DEFAULT( true ), 1000, onCr.HexX, onCr.HexY );
-        
-        onCr.StatBase[ ST_CURRENT_HP ] = -20;
-        onCr.StatBase[ST_MAX_LIFE] -= healDebuff;
 
-        onCr.Say( SAY_NETMSG, "|0xFFFF00 Ваш организм получил шанс на выживание, но ваше здоровье никогда не станет прежним." );
+        onCr.StatBase[ ST_CURRENT_HP ] = -15;
+        onCr.StatBase[ ST_MAX_LIFE ] -= healDebuff;
+
+        onCr.Say( SAY_NETMSG, "|0xFFFF00 Вы чувствуете, как ваше сердце начинает биться чаще, а раны затягиваются." );
         return;           
     }
 
@@ -276,6 +279,7 @@ void UseDrugOn( Critter& cr, Critter@ onCr, Item& drug ) // Export
 			cr.SayMsg( SAY_NETMSG, TEXTMSG_GAME, STR_SKILL_NORESSURECT );
 			return;
 		}
+
         onCr.SayMsg( SAY_NETMSG, TEXTMSG_GAME, STR_DRUG_USE_ON_SUCC );
 	}
     if( isHealingAgent( drug ) )
