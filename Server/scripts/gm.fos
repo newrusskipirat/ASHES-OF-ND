@@ -836,7 +836,7 @@ GMCommand( _gmlex )
     if( param0 < 1 )
         return;
     Critter@ cr = GetCritter( param0 );
-    if( @cr is null || cr.IsNpc() )
+    if( @cr is null )
     {
         player.Say( SAY_NETMSG, "Игрок не найден." );
         return;
