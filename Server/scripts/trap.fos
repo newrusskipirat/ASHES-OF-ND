@@ -60,12 +60,9 @@ bool _CanItemTrap( Item& trap )
 
 bool _CanItemTrap( uint pid )     // new
 {
-    bool isTrap =    ( pid == PID_MOLOTOV_COCKTAIL ||
-                       pid == PID_FRAG_GRENADE ||
+    bool isTrap =    ( pid == PID_FRAG_GRENADE ||
                        pid == PID_PLASMA_GRENADE ||
                        pid == PID_PULSE_GRENADE ||
-                       pid == PID_SHOTGUN ||
-                       pid == PID_SAWED_OFF_SHOTGUN ||
                        pid == PID_TRAP_KNIFES ||
                        pid == PID_TRAP_ELECTRIC ||
                        pid == PID_TRAP_ITEM_BREAKER ||
@@ -361,13 +358,13 @@ void TrapDamagePlayer( Item& trap, Critter& player, Item& trappedItem )
         {
             uint tx = player.HexX;
             uint ty = player.HexY;
-            if( trapPid == PID_MOLOTOV_COCKTAIL )
+            /* if( trapPid == PID_MOLOTOV_COCKTAIL )
             {
                 ExplodeEx( map, tx, ty, PID_EXPLODE_FIRE_BIG, 5, damage, damageType, 5, identy.GetValue() ); // Export
                 // map.RunEffect(PID_EXPLODE_FIRE_BIG,tx,ty,2);
                 // QuakeScreen(map);
-            }
-            else if( trapPid == PID_FRAG_GRENADE || trapPid == PID_HOLY_HAND_GRENADE )
+            } */
+            if( trapPid == PID_FRAG_GRENADE || trapPid == PID_HOLY_HAND_GRENADE )
             {
                 ExplodeEx( map, tx, ty, PID_EXPLODE_FIRE_SMALL, 2, damage, damageType, 2, identy.GetValue() );
                 // map.RunEffect(PID_EXPLODE_FIRE_SMALL,tx,ty,2);
@@ -380,10 +377,10 @@ void TrapDamagePlayer( Item& trap, Critter& player, Item& trappedItem )
                 // map.RunEffect(PID_EXPLODE_PLASMA,tx,ty,2);
                 // QuakeScreen(map);
             }
-            else if( trapPid == PID_SAWED_OFF_SHOTGUN || trapPid == PID_SHOTGUN )
+            /*else if( trapPid == PID_SAWED_OFF_SHOTGUN || trapPid == PID_SHOTGUN )
             {
                 player.ToKnockout( KNOCKOUT_ANIM2_DEFAULT( Random( 0, 1 ) == 0 ? true : false ), Random( 20, 100 ), player.HexX, player.HexY );
-            }
+            } */
 
         }
 
@@ -410,7 +407,7 @@ void TrapDamagePlayer( Item& trap, Critter& player, Item& trappedItem )
 
             else if( trapPid == PID_TRAP_POISON_BLADE )
             {
-                AffectPoison( player, 30 );
+                AffectPoison( player, 100 );
             }
             else if( trapPid == PID_TRAP_ELECTRIC )
             {}
@@ -425,11 +422,11 @@ void TrapDamagePlayer( Item& trap, Critter& player, Item& trappedItem )
             {}
             else if( trapPid == PID_TRAP_STUNNER || trapPid == PID_TRAP_SLEDGE_HAMMER )
             {
-                player.ToKnockout( KNOCKOUT_ANIM2_DEFAULT( Random( 0, 1 ) == 0 ? true : false ), Random( 20, 100 ), player.HexX, player.HexY );
+                player.ToKnockout( KNOCKOUT_ANIM2_DEFAULT( Random( 0, 1 ) == 0 ? true : false ), Random( 40, 80 ), player.HexX, player.HexY );
             }
             else if( trapPid == PID_TRAP_CANISTER_SHOT )
             {
-                damage = damage * ( 100 - ( player.Stat[ ST_ARMOR_CLASS ] + player.Stat[ ST_LUCK ] * 2.5 + player.Stat[ ST_AGILITY ] * 2.5 ) );
+                damage = damage * ( 120 - ( player.Stat[ ST_ARMOR_CLASS ] + player.Stat[ ST_LUCK ] * 2.5 + player.Stat[ ST_AGILITY ] * 2.5 ) );
                 /*
                    for(uint8 i = 0; i < 99; i++)
                    {

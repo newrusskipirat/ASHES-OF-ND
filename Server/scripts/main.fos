@@ -3064,8 +3064,8 @@ void items_crafted( Item@[]& items, uint[]& itemsCount, Item@[]& resources, Crit
     {
         items[ 0 ].Val6 = 2;
         items[ 0 ].Val5 = DAMAGE_FIRE;
-        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 5;
-        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 15;
+        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 3;
+        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 6;
 		items[ 0 ].Val1 = crafter.Id;
         return;
     }
@@ -3074,8 +3074,8 @@ void items_crafted( Item@[]& items, uint[]& itemsCount, Item@[]& resources, Crit
     {
         items[ 0 ].Val6 = 4;
         items[ 0 ].Val5 = DAMAGE_ELECTR;
-        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 5;
-        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 15;
+        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 3;
+        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 6;
 		items[ 0 ].Val1 = crafter.Id;
         return;
     }
@@ -3084,8 +3084,8 @@ void items_crafted( Item@[]& items, uint[]& itemsCount, Item@[]& resources, Crit
     {
         items[ 0 ].Val6 = 0;
         items[ 0 ].Val5 = DAMAGE_NORMAL;
-        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 10;
-        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 20;
+        items[ 0 ].Val4 = crafter.SkillBase[ SK_TRAPS ] / 8;
+        items[ 0 ].Val3 = crafter.SkillBase[ SK_TRAPS ] / 16;
 		items[ 0 ].Val1 = crafter.Id;
         return;
     }
