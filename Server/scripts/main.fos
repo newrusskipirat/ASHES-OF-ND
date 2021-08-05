@@ -575,6 +575,31 @@ bool critter_use_item( Critter& cr, Item& item, Critter@ targetCr, Item@ targetI
 	
 
 	//Отдельная механика обработки топора:
+    if( ( pid == PID_SLEDGEHAMMER || pid == PID_MULTI_TOOL ) && valid(targetScen) && !valid(targetItem) )
+    {
+        if( cr.Timeout[ TO_SK_REPAIR ] > 0 ) 
+        { 
+            cr.Say( SAY_NETMSG, "Вы слишком устали, дайте отдых рукам." ); 
+            return true; 
+        }
+
+        Map@ map = cr.GetMap();
+        if( !valid(map) ) 
+            return false;
+
+        Item@ holder = map.GetItem( targetScen.HexX, targetScen.HexY, PID_POPUP );
+
+        if( !valid(holder) ) 
+        {
+            Item@ hand = cr.GetItem( 0, SLOT_HAND1 );
+            cr.RunClientScript( "client_main@Harvesting", targetScen.ProtoId, valid(hand) ? hand.GetProtoId() : 0, 0, null, null );
+        }
+        else
+            cr.Say( SAY_NETMSG, "Тут всё уже переворошили до вас.");
+
+        return true;
+    }
+
 	if( pid == PID_AXE ) {
 		//Применение топора на трупах убирает тела, если есть лопата в инвентаре.
 		if( cr.CountItem(PID_SHOVEL) > 0 && valid(targetCr) && !targetCr.IsPlayer() && !targetCr.IsLife() ) { 
