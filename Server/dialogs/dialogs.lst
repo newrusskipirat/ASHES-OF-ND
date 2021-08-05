@@ -101,11 +101,12 @@ $	386	sat_doc
 $	387	sat_narcodiller
 $	388	sat_Reactorguy
 $	389	sat_weaponguy
+$   390 sat_trader_taylor
 
-$	390	mod_trader_vendor
-$	391	mod_trader_baltas
-$	392	mod_sheriff
-$	393	vin_mal
+$	391	mod_trader_vendor
+$	392	mod_trader_baltas
+$	393	mod_sheriff
+$	394	vin_mal
 
 $   400   mod_gov_treasurer
 $	401	  black_junk
