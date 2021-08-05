@@ -990,6 +990,31 @@ class GUIScreen : IGUIScreenOpt
 //                       Message("key pressed = "+key);
                 return true;
             }
+
+			//Использования предмета в руках на что-либо. Хоткей "использовать на".
+            if( key == DIK_A && !__ConsoleActive && !KeyPressed[ DIK_LCONTROL ] && !KeyPressed[ DIK_LMENU ] ) {
+				CritterCl @ choo = GetChosen();
+				ItemCl@ tool = choo.GetItem( 0, SLOT_HAND1 );
+				if( tool !is null )
+				{
+					if( tool.GetType() != ITEM_TYPE_WEAPON )
+					{
+						ChangeCursor( CURSOR_USE_OBJECT );
+						return true;
+					}
+					else
+					{
+						uint8 mode = 0;
+						ProtoItem@ weapon = choo.GetSlotProto( SLOT_HAND1, mode );
+						if( mode == 4 )
+						{
+							ChangeCursor( CURSOR_USE_OBJECT );
+							return true;
+						}
+					}
+				}
+            }
+
             // RunServerScriptUnsafe("general_unsafe@unsafe_attackMob",  target.Id, current_group, 0, null, controlled);
             if( key == DIK_P && !__ConsoleActive )
             {
