@@ -281,13 +281,13 @@ void answer_FIRSTAID_TO_UNBANDAGE( Critter& player, uint answerI, string& answer
     }
     if( answerI == 1 && (_CritCountItem( player, PID_HEALING_POWDER )>0))
     {
-	Item@ item = null;
+	Item@ item = player.GetItem( PID_HEALING_POWDER, -1 );
 	ItemPowderUse( targetCr, item, player);
 	player.DeleteItem( PID_HEALING_POWDER, 1 );
     }
     if( answerI == 2 && (_CritCountItem( player, PID_STIMPAK )>0))
     {
-	Item@ item = null;
+	Item@ item = player.GetItem( PID_STIMPAK, -1 );
 	ItemStimpackUse( targetCr, item, player);
 	player.DeleteItem( PID_STIMPAK, 1 );
     }
