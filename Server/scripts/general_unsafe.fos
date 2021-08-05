@@ -1587,7 +1587,6 @@ void unsafe_hotkey_command( Critter& player, int param0, int param1, int param2,
 
 void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@ command, int[] @ param4 )
 {
-
 	if( player.IsBusy() ) return;
 
     Map@ map = player.GetMap();
@@ -1651,6 +1650,9 @@ void unsafe_hex_attack( Critter& player, int hexX, int hexY, int param2, string@
     player.ParamBase[ ST_CURRENT_AP ] -= _WeaponApCost( weapon, mode ) * 100;
 	player.Wait(1000);
     // HIT_LOCATION_UNCALLED
+
+	if (player.GetTimeEvents( CTE_SLOWRELOAD, null, null, null ) > 0) 
+		player.EraseTimeEvents( CTE_SLOWRELOAD );
 
     CombatAttack( player, target, weapon, mode, ammo, uint16( hexX ), uint16( hexY ) );
 }
