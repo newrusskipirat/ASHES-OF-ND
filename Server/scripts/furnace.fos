@@ -114,7 +114,7 @@ void dlg_FurnaceMenu( Critter& cr, uint answerI, string& answerS )
 				else 
 				{
 					InjureCritter( cr, 3, DAMAGE_FIRE, 0, 0 );
-					cr.Say( SAY_NETMSG, "|0xFFFF00 Вы обожглись!" );
+					cr.Say( SAY_NETMSG, "|0xFFFF00 Вы обожглись!" ); // 123
 					return;
 				}
 			}
