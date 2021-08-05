@@ -5194,9 +5194,9 @@ void Harvesting( int pid, int hand, int param2, string@ param3, int[] @ param4 )
 			{ 2943, 2944 },
 		//Мнем железо, ага
 		{ PID_SLEDGEHAMMER }, { PID_CRAFT_M_JUNK, PID_CRAFT_M_BARS, 0, PID_BANKA_MEH, 0 },
-			{ 2224, 2225, 2226, 4604 },
+			{ 2224, 2225, 2226, 2227, 2228, 4604 },
 		{ PID_MULTI_TOOL },   {  PID_CRAFT_M_JUNK, PID_CRAFT_M_BARS, 0, PID_BANKA_MEH, 0 },	
-			{ 2224, 2225, 2226, 4604 },
+			{ 2224, 2225, 2226, 2227, 2228, 4604 },
 		//Имитация фермерства
 		{ 0 }, {PID_BROC_FLOWER, PID_MUTATED_FRUIT}, {16800}, //БРОК
 		{ 0 }, {PID_MUTATED_FRUIT, PID_XANDER_ROOT}, {16801}, //ЗАНДЕР
